@@ -1,0 +1,54 @@
+/* ─── Colour palette ─────────────────────────────────────────────────────── */
+:root {
+  --color-bg: #FAF7F2;
+  --color-bg-dark: #14181F;
+  --color-surface: #FFFFFF;
+  --color-surface-dark: #1E2530;
+
+  --color-primary: #1E3A8A;
+  --color-primary-light: #3B5FBF;
+  --color-secondary: #0F766E;
+  --color-accent: #B45309;
+  --color-danger: #B91C1C;
+  --color-safe: #15803D;
+  --color-warning: #D97706;
+
+  --color-border: #D1C9BC;
+  --color-text: #1A1A1A;
+  --color-text-muted: #5C5248;
+  --color-text-on-primary: #FFFFFF;
+
+  /* ─── Spacing & shape ─── */
+  --radius: 10px;
+  --radius-lg: 16px;
+  --border: 1px solid var(--color-border);
+
+  /* ─── Typography ─── */
+  --font-en: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-dev: 'Noto Sans Devanagari', system-ui, sans-serif;
+
+  --text-sm: 16px;
+  --text-body: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --text-3xl: 36px;
+
+  /* ─── Components ─── */
+  --btn-height: 56px;
+  --gap: 16px;
+  --gap-lg: 24px;
+  --max-width: 480px;
+
+  /* ─── Transitions ─── */
+  --transition: 150ms ease;
+}
+
+/* ─── Dark mode overrides ────────────────────────────────────────────────── */
+[data-theme='dark'] {
+  --color-bg: var(--color-bg-dark);
+  --color-surface: var(--color-surface-dark);
+  --color-text: #F0EDE8;
+  --color-text-muted: #A09890;
+  --color-border: #3A3530;
+}

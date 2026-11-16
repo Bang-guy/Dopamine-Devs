@@ -1,0 +1,45 @@
+{
+  "name": "Digital Safety Companion",
+  "short_name": "SafetyComp",
+  "description": "Digital safety education for seniors — available in English, Hindi, and Marathi",
+  "theme_color": "#1E3A8A",
+  "background_color": "#FAF7F2",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/app",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Emergency Help",
+      "url": "/app/help",
+      "description": "Get immediate help if you've been scammed"
+    }
+  ]
+}
