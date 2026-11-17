@@ -109,6 +109,19 @@
     "familyView": "Family View",
     "demoLabel": "Demo Caregiver Code"
   },
+  "finish": "Finish",
+  "save": "Save number",
+  "checker": {
+    "checking": "Checking, please wait...",
+    "pasteLabel": "Paste the message or link here",
+    "pastePlaceholder": "Paste SMS, WhatsApp message, or payment request link...",
+    "checkButton": "Check",
+    "clearButton": "Clear",
+    "guaranteeDisclaimer": "This tool gives a warning, not a guarantee. New scams may not be detected.",
+    "warningSigns": "Warning signs detected:",
+    "seeSteps": "See the steps to take",
+    "checkAnother": "Check another message"
+  },
   "help": {
     "checklist": {
       "title": "If You Were Scammed — Do This Now",
@@ -117,14 +130,60 @@
       "step3": "Call the Cyber Crime Helpline: 1930",
       "step4": "Tell a trusted family member or friend.",
       "step5": "Report at cybercrime.gov.in",
-      "startOver": "Start Over"
+      "startOver": "Start Over",
+      "step1Title": "1. Call 1930 now",
+      "step1Body": "Keep ready: your bank name, the amount, the time of the transaction, and the 12-digit UTR number from your SMS or UPI app.",
+      "step2Title": "2. Ask your bank to freeze your account and cards",
+      "step2Body": "Call the number on the back of your card. Ask them to block your card and UPI. The bank does this, not this app.",
+      "step3Title": "3. Switch on Airplane Mode if you clicked a link or installed an app",
+      "step3Body": "This can stop a remote-control app from working.",
+      "step4Title": "4. Take screenshots of the SMS, the chat, the link, and the payment receipt",
+      "step4Body": "Do not delete them.",
+      "step5Title": "5. File a complaint at cybercrime.gov.in and save the acknowledgement number",
+      "step5Body": "Use the official portal to track progress and assist police investigation.",
+      "howToDoThis": "How to do this",
+      "hideGuide": "Hide guide",
+      "openPortal": "Open cybercrime.gov.in",
+      "allDone": "You have done the important steps.",
+      "guideTitle": "Bank Account Freeze Guide:",
+      "confirmReset": "Reset checklist? This clears all checkmarks.",
+      "yesClear": "Yes, clear",
+      "noKeep": "No, keep"
+    },
+    "hub": {
+      "checklistTitle": "Got scammed? Follow these steps",
+      "checklistDesc": "Five urgent actions to freeze accounts and report fraud",
+      "verifyTitle": "What to do with a suspicious message",
+      "verifyDesc": "Step-by-step verification guide before replying or clicking",
+      "helplinesTitle": "Helpline numbers",
+      "helplinesDesc": "Direct emergency numbers, 1930, and your bank helpline",
+      "tutorialTitle": "Replay the tutorial",
+      "tutorialDesc": "Review the four essential safety rules of this app"
     },
     "verify": {
       "title": "Verify a Message or Call"
     },
     "helplines": {
       "title": "Emergency Helplines"
+    },
+    "tutorial": {
+      "card1Body": "No bank, government, or company will ever ask for your OTP, PIN, or password. If someone asks, it is a scam.",
+      "card2Body": "If you get a suspicious message or call, use the Check a Message feature. We will tell you if it is safe.",
+      "card3Body": "Practice spotting scams in a safe environment. The more you practice, the more confident you will feel.",
+      "card4Body": "If you think you have been scammed, tap the red bar at the bottom. It will guide you step by step."
     }
+  },
+  "verify": {
+    "step1Title": "1. Do not click, reply, or call the number in the message",
+    "step1Body": "Scammers create urgency to rush you. Take a breath and stop. Never use phone numbers or links sent in an unexpected message.",
+    "step2Title": "2. Open your bank app or type the address yourself",
+    "step2Body": "Always use the trusted official mobile banking app or type the verified website address directly into your browser.",
+    "step3Title": "3. Call the number printed on your card",
+    "step3Body": "Turn your debit or credit card around. The toll-free number printed on the back connects you to real bank representatives.",
+    "step4Title": "4. If you already shared an OTP or PIN, call 1930 now",
+    "step4Body": "Quick action within the golden hour stops cybercriminals from withdrawing money from intermediary accounts.",
+    "step5Title": "5. Report the message at cybercrime.gov.in",
+    "step5Body": "Or use the report/spam option in WhatsApp or your SMS app to protect other citizens from this scam."
   },
   "simulator": {
     "safeBrowsing": "Safe Browsing",

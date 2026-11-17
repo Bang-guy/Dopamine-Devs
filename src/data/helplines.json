@@ -1,0 +1,153 @@
+{
+  "categories": [
+    {
+      "id": "fraud",
+      "title": {
+        "en": "Money lost or fraud happening",
+        "hi": "पैसे खो गए या धोखाधड़ी हो रही है",
+        "mr": "पैसे गेले किंवा फसवणूक होत आहे"
+      },
+      "entries": [
+        {
+          "id": "1930",
+          "name": {
+            "en": "National Cybercrime Helpline",
+            "hi": "राष्ट्रीय साइबर अपराध हेल्पलाइन",
+            "mr": "राष्ट्रीय सायबर गुन्हे हेल्पलाइन"
+          },
+          "number": "1930",
+          "description": {
+            "en": "24 hours, toll-free. Call immediately if money was taken.",
+            "hi": "24 घंटे, टोल-फ्री। पैसे कटने पर तुरंत कॉल करें।",
+            "mr": "24 तास, टोल-फ्री. पैसे गेले असल्यास त्वरित कॉल करा."
+          },
+          "isTollFree": true,
+          "verified": true
+        },
+        {
+          "id": "cybercrime-portal",
+          "name": {
+            "en": "National Cyber Crime Reporting Portal",
+            "hi": "राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल",
+            "mr": "राष्ट्रीय सायबर गुन्हे नोंदणी पोर्टल"
+          },
+          "url": "https://cybercrime.gov.in",
+          "description": {
+            "en": "Official government website to file a cyber complaint.",
+            "hi": "साइबर शिकायत दर्ज करने की आधिकारिक सरकारी वेबसाइट।",
+            "mr": "सायबर तक्रार नोंदवण्यासाठी अधिकृत सरकारी वेबसाइट."
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "bank",
+      "title": {
+        "en": "Problem with a bank transaction",
+        "hi": "बैंक लेनदेन में समस्या",
+        "mr": "बँक व्यवहारात समस्या"
+      },
+      "entries": [
+        {
+          "id": "bank-custom",
+          "name": {
+            "en": "Your bank customer care number",
+            "hi": "आपके बैंक का कस्टमर केयर नंबर",
+            "mr": "तुमचा बँक ग्राहक सेवा क्रमांक"
+          },
+          "isUserStoredBank": true,
+          "description": {
+            "en": "Call the number on the back of your card to freeze accounts.",
+            "hi": "खाता फ्रीज करने के लिए अपने कार्ड के पीछे लिखे नंबर पर कॉल करें।",
+            "mr": "खाते गोठवण्यासाठी तुमच्या कार्डच्या मागील नंबरवर कॉल करा."
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "emergency",
+      "title": {
+        "en": "Emergency or physical danger",
+        "hi": "आपातकालीन या शारीरिक खतरा",
+        "mr": "आपत्कालीन किंवा शारीरिक धोका"
+      },
+      "entries": [
+        {
+          "id": "112",
+          "name": {
+            "en": "National Emergency Helpline",
+            "hi": "राष्ट्रीय आपातकालीन हेल्पलाइन",
+            "mr": "राष्ट्रीय आपत्कालीन हेल्पलाइन"
+          },
+          "number": "112",
+          "description": {
+            "en": "For immediate police, fire, or medical emergency assistance.",
+            "hi": "तत्काल पुलिस, अग्निशमन या चिकित्सा सहायता के लिए।",
+            "mr": "त्वरित पोलीस, अग्निशामक किंवा वैद्यकीय मदतीसाठी."
+          },
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "local",
+      "title": {
+        "en": "State and local support",
+        "hi": "राज्य और स्थानीय सहायता",
+        "mr": "राज्य आणि स्थानिक मदत"
+      },
+      "entries": [
+        {
+          "id": "mh-cyber",
+          "name": {
+            "en": "Maharashtra Cyber Assistance",
+            "hi": "महाराष्ट्र साइबर सहायता",
+            "mr": "महाराष्ट्र सायबर मदत"
+          },
+          "number": "1945",
+          "description": {
+            "en": "Maharashtra state cyber police helpline.",
+            "hi": "महाराष्ट्र राज्य साइबर पुलिस हेल्पलाइन।",
+            "mr": "महाराष्ट्र राज्य सायबर पोलीस हेल्पलाइन."
+          },
+          "notes": "verify before launch",
+          "verified": false
+        },
+        {
+          "id": "women-abuse",
+          "name": {
+            "en": "Women and children helpline for online abuse",
+            "hi": "ऑनलाइन उत्पीड़न के लिए महिला एवं बाल हेल्पलाइन",
+            "mr": "ऑनलाइन छळासाठी महिला आणि बाल हेल्पलाइन"
+          },
+          "number": "181",
+          "description": {
+            "en": "Support for women facing harassment or fraud online.",
+            "hi": "ऑनलाइन उत्पीड़न या धोखाधड़ी का सामना करने वाली महिलाओं के लिए सहायता।",
+            "mr": "ऑनलाइन छळ किंवा फसवणुकीला सामोरे जाणाऱ्या महिलांसाठी मदत."
+          },
+          "notes": "verify before launch",
+          "verified": false
+        },
+        {
+          "id": "nagpur-police",
+          "name": {
+            "en": "Nagpur City and Rural Cyber Police",
+            "hi": "नागपुर शहर एवं ग्रामीण साइबर पुलिस",
+            "mr": "नागपूर शहर आणि ग्रामीण सायबर पोलीस"
+          },
+          "placeholder": true,
+          "description": {
+            "en": "Add the verified number before the demo",
+            "hi": "डेमो से पहले सत्यापित नंबर जोड़ें",
+            "mr": "डेमोपूर्वी पडताळलेला नंबर जोडा"
+          },
+          "notes": "verify before launch",
+          "verified": false
+        }
+      ]
+    }
+  ]
+}

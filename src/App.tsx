@@ -17,6 +17,12 @@ const OnboardingFlow = lazy(() => import('./features/onboarding/OnboardingFlow')
 const NotFound = lazy(() => import('./pages/NotFound'));
 const ScenarioScreen = lazy(() => import('./features/simulator/ScenarioScreen'));
 
+// Phase 6 Help sub-features
+const Checklist1930 = lazy(() => import('./features/help/Checklist1930'));
+const VerifyFlow = lazy(() => import('./features/help/VerifyFlow'));
+const Helplines = lazy(() => import('./features/help/Helplines'));
+const TutorialReplay = lazy(() => import('./features/help/TutorialReplay'));
+
 function RequireOnboarding({ children }: { children: React.ReactNode }) {
   const profile = getProfile();
   if (!profile?.onboardingComplete) {
@@ -59,6 +65,10 @@ export default function App() {
           <Route path="check" element={<Check />} />
           <Route path="learn" element={<Learn />} />
           <Route path="help" element={<Help />} />
+          <Route path="help/checklist" element={<Checklist1930 />} />
+          <Route path="help/verify" element={<VerifyFlow />} />
+          <Route path="help/helplines" element={<Helplines />} />
+          <Route path="help/tutorial" element={<TutorialReplay />} />
           <Route path="settings" element={<SettingsPage />} />
           <Route path="profile" element={<Profile />} />
           <Route path="caregiver" element={<Caregiver />} />

@@ -29,6 +29,7 @@ const LS_KEYS = {
   PROFILE: 'dsc_profile',
   PROGRESS: 'dsc_progress',
   SETTINGS: 'dsc_settings',
+  BANK_CARE_NUMBER: 'dsc_bank_care_number',
 } as const;
 
 function lsSet<T>(key: string, value: T): void {
@@ -89,6 +90,16 @@ export function getSettings(): AppSettings {
       alertsEnabled: true,
     }
   );
+}
+
+// ─── Bank Care Number ──────────────────────────────────────────────────────
+
+export function saveBankCareNumber(number: string): void {
+  lsSet(LS_KEYS.BANK_CARE_NUMBER, number);
+}
+
+export function getBankCareNumber(): string {
+  return lsGet<string>(LS_KEYS.BANK_CARE_NUMBER) ?? '';
 }
 
 // ─── Clear all data ─────────────────────────────────────────────────────────

@@ -6,11 +6,11 @@ export default function AppShell() {
   const { t } = useTranslation();
 
   const navItems = [
-    { to: '/app/home',     label: t('nav.home'),     icon: '🏠' },
-    { to: '/app/practise', label: t('nav.practise'),  icon: '🎯' },
-    { to: '/app/check',    label: t('nav.check'),     icon: '🔍' },
-    { to: '/app/learn',    label: t('nav.learn'),     icon: '📚' },
-    { to: '/app/help',     label: t('nav.help'),      icon: '🆘' },
+    { to: '/app/home', label: t('nav.home'), icon: '🏠' },
+    { to: '/app/practise', label: t('nav.practise'), icon: '🎯' },
+    { to: '/app/check', label: t('nav.check'), icon: '🔍' },
+    { to: '/app/learn', label: t('nav.learn'), icon: '📚' },
+    { to: '/app/help', label: t('nav.help'), icon: '🆘' },
   ];
 
   return (

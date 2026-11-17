@@ -1,0 +1,84 @@
+{
+  "rules": [
+    {
+      "id": "R1",
+      "verdict": "red",
+      "description": "Asks for OTP, PIN, CVV, MPIN, or card number",
+      "reasons": {
+        "en": "This message asks for a code or number that no bank will ever ask for.",
+        "hi": "यह संदेश ऐसा कोड या नंबर मांगता है जो कोई भी बैंक कभी नहीं मांगता।",
+        "mr": "हा संदेश असा कोड किंवा नंबर मागतो जो कोणतीही बँक कधीही मागत नाही."
+      }
+    },
+    {
+      "id": "R2",
+      "verdict": "red",
+      "description": "Threatens blocking or arrest combined with act-now urgency",
+      "reasons": {
+        "en": "This message threatens your account and asks you to act at once.",
+        "hi": "यह संदेश आपके खाते को ब्लॉक करने की धमकी देता है और तुरंत कार्रवाई करने को कहता है।",
+        "mr": "हा संदेश तुमच्या खात्याला धोका दाखवतो आणि त्वरित कृती करण्यास सांगतो."
+      }
+    },
+    {
+      "id": "R3",
+      "verdict": "red",
+      "description": "Imitates bank/gov domain or uses shortener or suspicious TLD",
+      "reasons": {
+        "en": "The link address does not belong to a real bank or government website.",
+        "hi": "लिंक का पता किसी वास्तविक बैंक या सरकारी वेबसाइट का नहीं है।",
+        "mr": "लिंकचा पत्ता खऱ्या बँकेच्या किंवा सरकारी वेबसाइटचा नाही."
+      }
+    },
+    {
+      "id": "R4",
+      "verdict": "red",
+      "description": "Asks to install an app or share screen",
+      "reasons": {
+        "en": "Installing an app or sharing your screen lets a stranger control your phone.",
+        "hi": "ऐप इंस्टॉल करने या स्क्रीन साझा करने से अनजान व्यक्ति आपके फोन को नियंत्रित कर सकता है।",
+        "mr": "अॅप इंस्टॉल केल्याने किंवा स्क्रीन शेअर केल्याने अनोळखी व्यक्ती तुमचा फोन नियंत्रित करू शकते."
+      }
+    },
+    {
+      "id": "Y1",
+      "verdict": "yellow",
+      "description": "Urgency words",
+      "reasons": {
+        "en": "The message uses urgent words to stop you from thinking carefully.",
+        "hi": "संदेश आपको ध्यान से सोचने से रोकने के लिए जल्दबाजी वाले शब्दों का उपयोग करता है।",
+        "mr": "संदेश तुम्हाला नीट विचार करण्यापासून रोखण्यासाठी घाईगडबडीचे शब्द वापरतो."
+      }
+    },
+    {
+      "id": "Y2",
+      "verdict": "yellow",
+      "description": "Prize, cashback, lottery, refund or reward claim",
+      "reasons": {
+        "en": "Prizes and refunds that you did not ask for are a common trick.",
+        "hi": "इनाम और रिफंड जो आपने नहीं मांगे, वे एक आम धोखाधड़ी हैं।",
+        "mr": "तुम्ही न मागितलेली बक्षिसे आणि परतावे ही एक सामान्य फसवणूक आहे."
+      }
+    },
+    {
+      "id": "Y3",
+      "verdict": "yellow",
+      "description": "Any link from unexpected source",
+      "reasons": {
+        "en": "Do not open links in messages you did not expect.",
+        "hi": "उन संदेशों में लिंक न खोलें जिनकी आपने अपेक्षा नहीं की थी।",
+        "mr": "अपेक्षित नसलेल्या संदेशांमधील लिंक उघडू नका."
+      }
+    },
+    {
+      "id": "Y4",
+      "verdict": "yellow",
+      "description": "Phone number in message",
+      "reasons": {
+        "en": "Call only the number printed on your card or on the official website.",
+        "hi": "केवल अपने कार्ड पर छपे या आधिकारिक वेबसाइट वाले नंबर पर ही कॉल करें।",
+        "mr": "फक्त तुमच्या कार्डवर छापलेल्या किंवा अधिकृत वेबसाइटवरील नंबरवर कॉल करा."
+      }
+    }
+  ]
+}
