@@ -15,6 +15,7 @@ const Profile = lazy(() => import('./pages/Profile'));
 const Caregiver = lazy(() => import('./pages/Caregiver'));
 const OnboardingFlow = lazy(() => import('./features/onboarding/OnboardingFlow'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const ScenarioScreen = lazy(() => import('./features/simulator/ScenarioScreen'));
 
 function RequireOnboarding({ children }: { children: React.ReactNode }) {
   const profile = getProfile();
@@ -27,7 +28,7 @@ function RequireOnboarding({ children }: { children: React.ReactNode }) {
 function LoadingFallback() {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100dvh' }}>
-      <span>Loading…</span>
+      <span>Loading...</span>
     </div>
   );
 }
@@ -54,6 +55,7 @@ export default function App() {
           <Route index element={<Navigate to="/app/home" replace />} />
           <Route path="home" element={<Home />} />
           <Route path="practise" element={<Practise />} />
+          <Route path="practise/scenario/:id" element={<ScenarioScreen />} />
           <Route path="check" element={<Check />} />
           <Route path="learn" element={<Learn />} />
           <Route path="help" element={<Help />} />

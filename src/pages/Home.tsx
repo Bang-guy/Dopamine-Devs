@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { getProfile } from '../services/storage';
 import ListenButton from '../components/ListenButton';
+import ProgressBar from '../components/ProgressBar';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -27,15 +28,29 @@ export default function Home() {
         💡 {t('coreRule')}
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--gap)' }}>
+      <ProgressBar />
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap)' }}>
         {tiles.map((tile) => (
-          <button
-            key={tile.to}
-            onClick={() => navigate(tile.to)}
-            style={{ background: tile.bg, color: tile.color, minHeight: '100px', borderRadius: 'var(--radius-lg, 16px)', fontSize: 'var(--text-body)', fontWeight: 700, padding: '16px' }}
-          >
-            {tile.label}
-          </button>
+          <div key={tile.to} style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            <button
+              onClick={() => navigate(tile.to)}
+              style={{
+                flex: 1,
+                background: tile.bg,
+                color: tile.color,
+                minHeight: 'var(--btn-height)',
+                borderRadius: 'var(--radius-lg, 16px)',
+                fontSize: 'var(--text-lg)',
+                fontWeight: 700,
+                padding: '16px',
+                textAlign: 'left'
+              }}
+            >
+              {tile.label}
+            </button>
+            <ListenButton text={tile.label} />
+          </div>
         ))}
       </div>
     </div>

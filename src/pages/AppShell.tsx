@@ -16,12 +16,12 @@ export default function AppShell() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100dvh' }}>
       <PanicBar />
-      <main style={{ flex: 1, paddingTop: '60px', paddingBottom: '72px', overflowY: 'auto' }}>
+      <main style={{ flex: 1, paddingTop: '16px', paddingBottom: '140px', overflowY: 'auto' }}>
         <div className="container">
           <Outlet />
         </div>
       </main>
-      <nav style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background: 'var(--color-surface, #fff)', borderTop: 'var(--border)', display: 'flex', justifyContent: 'space-around', padding: '8px 0', zIndex: 100 }}>
+      <nav style={{ position: 'fixed', bottom: '60px', left: 0, right: 0, background: 'var(--color-surface, #fff)', borderTop: 'var(--border)', display: 'flex', justifyContent: 'space-around', padding: '8px 0', zIndex: 100 }}>
         {navItems.map((item) => (
           <NavLink
             key={item.to}
