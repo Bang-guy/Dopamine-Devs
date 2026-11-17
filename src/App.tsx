@@ -26,6 +26,12 @@ const TutorialReplay = lazy(() => import('./features/help/TutorialReplay'));
 // Phase 5 Learn sub-features
 const KycModule = lazy(() => import('./features/learn/KycModule'));
 
+// Phase 8 Extras
+const FaqPage = lazy(() => import('./features/extras/FaqPage'));
+const ScamOfTheWeek = lazy(() => import('./features/extras/ScamOfTheWeek'));
+const PrintableCard = lazy(() => import('./features/extras/PrintableCard'));
+const LegalPage = lazy(() => import('./features/extras/LegalPage'));
+
 function RequireOnboarding({ children }: { children: React.ReactNode }) {
   const profile = getProfile();
   if (!profile?.onboardingComplete) {
@@ -76,6 +82,12 @@ export default function App() {
           <Route path="settings" element={<SettingsPage />} />
           <Route path="profile" element={<Profile />} />
           <Route path="caregiver" element={<Caregiver />} />
+          <Route path="faq" element={<FaqPage />} />
+          <Route path="scams" element={<ScamOfTheWeek />} />
+          <Route path="printable-card" element={<PrintableCard />} />
+          <Route path="about" element={<LegalPage type="about" />} />
+          <Route path="privacy" element={<LegalPage type="privacy" />} />
+          <Route path="terms" element={<LegalPage type="terms" />} />
         </Route>
 
         {/* 404 */}

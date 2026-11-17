@@ -1,0 +1,74 @@
+{
+  "scams": [
+    {
+      "id": "s1",
+      "source": "RBI Kehta Hai Advisory",
+      "title": {
+        "en": "Fake Electricity Bill Disconnection Threats",
+        "hi": "फर्जी बिजली बिल कटौती की धमकियां",
+        "mr": "बनावट वीज बिल कनेक्शन तोडण्याच्या धमक्या"
+      },
+      "summary": {
+        "en": "Citizens receive SMS stating their power will be disconnected at 9:30 PM unless they call an unauthorized mobile number.",
+        "hi": "नागरिकों को एसएमएस मिलता है कि जब तक वे किसी अनधिकृत नंबर पर कॉल नहीं करते, रात 9:30 बजे बिजली काट दी जाएगी।",
+        "mr": "नागरिकांना एसएमएस मिळतो की त्यांनी अनधिकृत नंबरवर कॉल न केल्यास रात्री 9:30 वाजता वीज खंडित केली जाईल."
+      }
+    },
+    {
+      "id": "s2",
+      "source": "Indian Cyber Crime Coordination Centre (I4C)",
+      "title": {
+        "en": "Digital Arrest via WhatsApp Video Call",
+        "hi": "व्हाट्सएप वीडियो कॉल के जरिए डिजिटल अरेस्ट",
+        "mr": "व्हॉट्सअॅप व्हिडिओ कॉलद्वारे डिजिटल अटक"
+      },
+      "summary": {
+        "en": "Scammers wear fake police uniforms and claim that illegal parcels or narcotics were found in your Aadhaar name.",
+        "hi": "धोखेबाज फर्जी पुलिस की वर्दी पहनते हैं और दावा करते हैं कि आपके आधार के नाम पर अवैध पार्सल मिले हैं।",
+        "mr": "गुन्हेगार बनावट पोलीस गणवेश घालून तुमच्या आधार कार्डवर बेकायदेशीर पार्सल सापडल्याचा खोटा दावा करतात."
+      }
+    },
+    {
+      "id": "s3",
+      "source": "National Payments Corporation of India (NPCI)",
+      "title": {
+        "en": "UPI Collect Request and PIN Scam",
+        "hi": "यूपीआई कलेक्ट अनुरोध और पिन घोटाला",
+        "mr": "यूपीआई कलेक्ट विनंती आणि पिन घोटाळा"
+      },
+      "summary": {
+        "en": "Fraudsters promise cash prizes and prompt users to enter their UPI PIN under the pretext of receiving money.",
+        "hi": "धोखेबाज नकद पुरस्कार का वादा करते हैं और पैसे प्राप्त करने के बहाने उपयोगकर्ताओं को अपना यूपीआई पिन दर्ज करने को कहते हैं।",
+        "mr": "फसवणूक करणारे रोख बक्षिसाचे आमिष दाखवून पैसे स्वीकारण्याच्या बहाण्याने यूपीआई पिन टाकण्यास सांगतात."
+      }
+    },
+    {
+      "id": "s4",
+      "source": "Telecom Regulatory Authority of India (TRAI)",
+      "title": {
+        "en": "SIM Card Block and 5G KYC Traps",
+        "hi": "सिम कार्ड ब्लॉक और 5G केवाईसी जाल",
+        "mr": "सिम कार्ड ब्लॉक आणि 5G केवायसी सापळा"
+      },
+      "summary": {
+        "en": "Callers threaten that your SIM card will be deactivated within 2 hours unless you install an APK file from their link.",
+        "hi": "कॉल करने वाले धमकी देते हैं कि यदि आप उनके लिंक से एपीके फ़ाइल इंस्टॉल नहीं करते हैं तो आपका सिम 2 घंटे में बंद हो जाएगा।",
+        "mr": "कॉल करणारे धमकी देतात की त्यांच्या लिंकवरून एपीके फाइल इंस्टॉल न केल्यास तुमचे सिम कार्ड २ तासांत बंद होईल."
+      }
+    },
+    {
+      "id": "s5",
+      "source": "Cyber Peace Foundation",
+      "title": {
+        "en": "Work from Home Part-Time Rating Scheme",
+        "hi": "घर से काम करने वाली अंशकालिक रेटिंग योजना",
+        "mr": "वर्क फ्रॉम होम पार्ट-टाइम रेटिंग फसवणूक"
+      },
+      "summary": {
+        "en": "Scammers ask victims to like YouTube videos or rate hotels, give small initial payouts, then freeze funds demanding lakhs.",
+        "hi": "धोखेबाज यूट्यूब वीडियो लाइक करने के लिए कहते हैं, शुरुआत में छोटे भुगतान देते हैं, फिर लाखों रुपये मांगकर पैसे फ्रीज कर देते हैं।",
+        "mr": "व्हिडिओ लाईक करायला सांगून सुरुवातीला थोडे पैसे देतात आणि नंतर लाखो रुपये गुंतवून फसवणूक करतात."
+      }
+    }
+  ]
+}
