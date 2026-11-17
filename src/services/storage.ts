@@ -23,6 +23,18 @@ export interface AppSettings {
   alertsEnabled: boolean;
 }
 
+export interface CaregiverData {
+  name: string;
+  relationship: string;
+  phone: string;
+  inviteCode: string;
+  approved: boolean;
+  permissions: {
+    lessonProgress: boolean;
+    redAlerts: boolean;
+  };
+}
+
 // ─── LocalStorage helpers ───────────────────────────────────────────────────
 
 const LS_KEYS = {
@@ -30,6 +42,7 @@ const LS_KEYS = {
   PROGRESS: 'dsc_progress',
   SETTINGS: 'dsc_settings',
   BANK_CARE_NUMBER: 'dsc_bank_care_number',
+  CAREGIVER: 'dsc_caregiver',
 } as const;
 
 function lsSet<T>(key: string, value: T): void {
@@ -100,6 +113,20 @@ export function saveBankCareNumber(number: string): void {
 
 export function getBankCareNumber(): string {
   return lsGet<string>(LS_KEYS.BANK_CARE_NUMBER) ?? '';
+}
+
+// ─── Caregiver Data ────────────────────────────────────────────────────────
+
+export function saveCaregiver(cg: CaregiverData | null): void {
+  if (!cg) {
+    localStorage.removeItem(LS_KEYS.CAREGIVER);
+  } else {
+    lsSet(LS_KEYS.CAREGIVER, cg);
+  }
+}
+
+export function getCaregiver(): CaregiverData | null {
+  return lsGet<CaregiverData>(LS_KEYS.CAREGIVER);
 }
 
 // ─── Clear all data ─────────────────────────────────────────────────────────
