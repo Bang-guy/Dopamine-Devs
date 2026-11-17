@@ -1,6 +1,5 @@
 {
   "appName": "Satark",
-
   "greeting": "नमस्ते, {{name}}!",
   "home": {
     "checkMessage": "संदेश जाँचें",

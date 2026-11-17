@@ -1,0 +1,135 @@
+{
+  "modules": [
+    {
+      "id": "kyc",
+      "live": true,
+      "title": {
+        "en": "KYC Account Blocked Scam",
+        "hi": "केवाईसी खाता ब्लॉक घोटाला",
+        "mr": "केवायसी खाते ब्लॉक घोटाळा"
+      },
+      "description": {
+        "en": "How scammers pretend to be banks threatening to block your account unless you update KYC.",
+        "hi": "धोखेबाज बैंक बनकर केवाईसी अपडेट न करने पर खाता ब्लॉक करने की धमकी कैसे देते हैं।",
+        "mr": "केवायसी अपडेट न केल्यास बँक असल्याचे भासवून खाते ब्लॉक करण्याची धमकी कशी दिली जाते."
+      },
+      "scamMessage": {
+        "en": "Dear customer, your bank account will be blocked today due to pending KYC. Click link to update immediately: sbi-kyc-verify.xyz",
+        "hi": "प्रिय ग्राहक, लंबित केवाईसी के कारण आपका बैंक खाता आज ब्लॉक कर दिया जाएगा। तुरंत अपडेट करने के लिए लिंक पर क्लिक करें: sbi-kyc-verify.xyz",
+        "mr": "प्रिय ग्राहक, प्रलंबित केवायसीमुळे तुमचे बँक खाते आज ब्लॉक केले जाईल. त्वरित अपडेट करण्यासाठी लिंकवर क्लिक करा: sbi-kyc-verify.xyz"
+      },
+      "redFlags": [
+        {
+          "en": "1. Urgent threat: claiming your account will be blocked today.",
+          "hi": "1. आपातकालीन धमकी: दावा करना कि आपका खाता आज ही ब्लॉक कर दिया जाएगा।",
+          "mr": "1. तातडीची धमकी: तुमचे खाते आजच ब्लॉक केले जाईल असा दावा करणे."
+        },
+        {
+          "en": "2. Suspicious web address: sbi-kyc-verify.xyz is not an official bank domain.",
+          "hi": "2. संदेहास्पद वेब पता: sbi-kyc-verify.xyz कोई आधिकारिक बैंक डोमेन नहीं है।",
+          "mr": "2. संशयास्पद वेब पत्ता: sbi-kyc-verify.xyz हे अधिकृत बँक डोमेन नाही."
+        },
+        {
+          "en": "3. Demanding personal details or app download over an unverified link.",
+          "hi": "3. असत्यापित लिंक के माध्यम से व्यक्तिगत विवरण या ऐप डाउनलोड करने की मांग।",
+          "mr": "3. असत्यापित लिंकद्वारे वैयक्तिक तपशील किंवा अॅप डाउनलोड करण्याची मागणी करणे."
+        }
+      ],
+      "safeAction": {
+        "en": "Safe Action: Never click links in KYC warning SMS. Visit your bank branch in person or use the verified official banking app.",
+        "hi": "सुरक्षित कदम: केवाईसी चेतावनी वाले संदेशों में लिंक पर कभी क्लिक न करें। व्यक्तिगत रूप से अपनी बैंक शाखा में जाएं या आधिकारिक ऐप का उपयोग करें।",
+        "mr": "सुरक्षित कृती: केवायसी चेतावणी संदेशांमधील लिंकवर कधीही क्लिक करू नका. स्वतः बँकेच्या शाखेत जा किंवा अधिकृत अॅप वापरा."
+      },
+      "quiz": [
+        {
+          "question": {
+            "en": "Will a real bank block your account within hours over an SMS link?",
+            "hi": "क्या कोई वास्तविक बैंक SMS लिंक के जरिए कुछ ही घंटों में आपका खाता ब्लॉक कर देगा?",
+            "mr": "खरी बँक एसएमएस लिंकद्वारे काही तासांत तुमचे खाते ब्लॉक करेल का?"
+          },
+          "options": [
+            { "text": { "en": "Yes, they act quickly", "hi": "हाँ, वे तुरंत कार्रवाई करते हैं", "mr": "होय, ते त्वरित कारवाई करतात" }, "correct": false },
+            { "text": { "en": "No, banks give official written notices and never ask for passwords via links", "hi": "नहीं, बैंक आधिकारिक लिखित सूचना देते हैं और कभी भी लिंक से पासवर्ड नहीं मांगते", "mr": "नाही, बँका अधिकृत लेखी सूचना देतात आणि लिंकद्वारे पासवर्ड मागत नाहीत" }, "correct": true }
+          ],
+          "explanation": {
+            "en": "Banks follow formal regulatory guidelines and never disconnect accounts immediately via SMS links.",
+            "hi": "बैंक औपचारिक नियमों का पालन करते हैं और एसएमएस लिंक के माध्यम से तुरंत खाते ब्लॉक नहीं करते हैं।",
+            "mr": "बँका अधिकृत नियमांचे पालन करतात आणि एसएमएस लिंकद्वारे त्वरित खाती बंद करत नाहीत."
+          }
+        },
+        {
+          "question": {
+            "en": "What should you do if you receive an urgent KYC update message?",
+            "hi": "यदि आपको तत्काल केवाईसी अपडेट संदेश प्राप्त होता है तो आपको क्या करना चाहिए?",
+            "mr": "तुम्हाला तात्काळ केवायसी अपडेटचा संदेश आल्यास तुम्ही काय करावे?"
+          },
+          "options": [
+            { "text": { "en": "Click the link and fill the form", "hi": "लिंक पर क्लिक करें और फॉर्म भरें", "mr": "लिंकवर क्लिक करा आणि फॉर्म भरा" }, "correct": false },
+            { "text": { "en": "Ignore the link and check at your official bank branch", "hi": "लिंक को नज़रअंदाज़ करें और अपनी आधिकारिक बैंक शाखा में पता करें", "mr": "लिंककडे दुर्लक्ष करा आणि अधिकृत बँक शाखेत चौकशी करा" }, "correct": true }
+          ],
+          "explanation": {
+            "en": "Always verify KYC requests directly with your bank branch or official customer service.",
+            "hi": "हमेशा अपनी बैंक शाखा या आधिकारिक ग्राहक सेवा के साथ सीधे केवाईसी अनुरोधों की पुष्टि करें।",
+            "mr": "नेहमी तुमच्या बँक शाखेशी किंवा अधिकृत ग्राहक सेवेद्वारे केवायसी विनंतीची खात्री करा."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lottery",
+      "live": false,
+      "title": {
+        "en": "Lottery & Prize Scams",
+        "hi": "लॉटरी और पुरस्कार घोटाले",
+        "mr": "लॉटरी आणि बक्षीस घोटाळे"
+      },
+      "description": {
+        "en": "How fake rewards and unexpected lotteries lure victims into paying processing fees.",
+        "hi": "नकली पुरस्कार और अनपेक्षित लॉटरी कैसे प्रोसेसिंग शुल्क का झांसा देते हैं।",
+        "mr": "बनावट बक्षिसे आणि लॉटरी लोकांना प्रक्रिया शुल्क भरण्यासाठी कशी फसवतात."
+      }
+    },
+    {
+      "id": "digital-arrest",
+      "live": false,
+      "title": {
+        "en": "Fake Police & Digital Arrest",
+        "hi": "फर्जी पुलिस और डिजिटल अरेस्ट",
+        "mr": "बनावट पोलीस आणि डिजिटल अटक"
+      },
+      "description": {
+        "en": "Understanding video call intimidation from fake police and law enforcement agents.",
+        "hi": "नकली पुलिस और कानून प्रवर्तन एजेंटों द्वारा वीडियो कॉल पर दी जाने वाली धमकी को समझना।",
+        "mr": "बनावट पोलीस आणि अधिकाऱ्यांकडून व्हिडिओ कॉलद्वारे केल्या जाणाऱ्या धमक्या समजून घेणे."
+      }
+    },
+    {
+      "id": "utility",
+      "live": false,
+      "title": {
+        "en": "Electricity & Bill Cutoff Fraud",
+        "hi": "बिजली और बिल कटौती धोखाधड़ी",
+        "mr": "वीज आणि बिल तोडण्याची फसवणूक"
+      },
+      "description": {
+        "en": "Urgent disconnection threats demanding payment on unknown numbers.",
+        "hi": "अज्ञात नंबरों पर भुगतान की मांग करने वाली तत्काल बिजली कटौती की धमकियां।",
+        "mr": "अज्ञात क्रमांकांवर पैसे मागणाऱ्या वीज पुरवठा खंडित करण्याच्या धमक्या."
+      }
+    },
+    {
+      "id": "investment",
+      "live": false,
+      "title": {
+        "en": "Part-Time Job & High Return Schemes",
+        "hi": "पार्ट-टाइम नौकरी और उच्च रिटर्न योजनाएं",
+        "mr": "पार्ट-टाइम नोकरी आणि जादा परतावा योजना"
+      },
+      "description": {
+        "en": "Promises of double money and daily returns designed to siphon savings.",
+        "hi": "बचत हड़पने के लिए तैयार किए गए दोगुने पैसे और दैनिक रिटर्न के वादे।",
+        "mr": "बचत हडप करण्यासाठी दुप्पट पैसे आणि रोजच्या परताव्याची खोटी आश्वासने."
+      }
+    }
+  ]
+}

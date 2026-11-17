@@ -23,6 +23,9 @@ const VerifyFlow = lazy(() => import('./features/help/VerifyFlow'));
 const Helplines = lazy(() => import('./features/help/Helplines'));
 const TutorialReplay = lazy(() => import('./features/help/TutorialReplay'));
 
+// Phase 5 Learn sub-features
+const KycModule = lazy(() => import('./features/learn/KycModule'));
+
 function RequireOnboarding({ children }: { children: React.ReactNode }) {
   const profile = getProfile();
   if (!profile?.onboardingComplete) {
@@ -64,6 +67,7 @@ export default function App() {
           <Route path="practise/scenario/:id" element={<ScenarioScreen />} />
           <Route path="check" element={<Check />} />
           <Route path="learn" element={<Learn />} />
+          <Route path="learn/kyc" element={<KycModule />} />
           <Route path="help" element={<Help />} />
           <Route path="help/checklist" element={<Checklist1930 />} />
           <Route path="help/verify" element={<VerifyFlow />} />
