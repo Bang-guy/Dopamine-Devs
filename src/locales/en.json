@@ -257,5 +257,10 @@
       "slot5": "Step-by-step help after a scam",
       "slot6": "Short lessons with voice"
     }
+  },
+  "news": {
+    "title": "Cyber Fraud News",
+    "subtitle": "Latest news articles and safety advisories",
+    "readArticle": "Read article"
   }
 }

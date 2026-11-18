@@ -13,6 +13,13 @@
   --color-safe: #15803D;
   --color-warning: #D97706;
 
+  /* Theme Refresh Accent Tokens */
+  --color-accent-saffron: #E8A33D;
+  --color-accent-teal: #0F766E;
+  --color-accent-blue: #1E3A8A;
+  --color-surface-cream: #FAF7F2;
+  --color-pattern: radial-gradient(rgba(0, 0, 0, 0.04) 1.5px, transparent 1.5px);
+
   --color-border: #D1C9BC;
   --color-text: #1A1A1A;
   --color-text-muted: #5C5248;
@@ -51,4 +58,11 @@
   --color-text: #F0EDE8;
   --color-text-muted: #A09890;
   --color-border: #3A3530;
+
+  /* Dark Theme Refresh Accent Tokens */
+  --color-accent-saffron: #F2B95C;
+  --color-accent-teal: #2DD4BF;
+  --color-accent-blue: #93C5FD;
+  --color-surface-cream: #14181F;
+  --color-pattern: radial-gradient(rgba(255, 255, 255, 0.04) 1.5px, transparent 1.5px);
 }

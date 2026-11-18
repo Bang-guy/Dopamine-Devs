@@ -4,6 +4,7 @@ import { getProfile, getCaregiver } from '../services/storage';
 import ListenButton from '../components/ListenButton';
 import ProgressBar from '../components/ProgressBar';
 import TipBox from '../components/TipBox';
+import NewsSection from '../components/NewsSection';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -127,6 +128,9 @@ export default function Home() {
 
       {/* 6. Learning Progress Section */}
       <ProgressBar />
+
+      {/* 7. Cyber Fraud News Section */}
+      <NewsSection />
     </div>
   );
 }

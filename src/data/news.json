@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "No provision for 'digital arrest' in law, cautions Ministry of Home Affairs",
+    "source": "The Hindu",
+    "url": "https://www.thehindu.com/news/national/no-provision-for-digital-arrest-in-law-says-mha/article68800169.ece",
+    "date": "Official Advisory"
+  },
+  {
+    "id": 2,
+    "title": "Digital arrest scams: How cybercriminals pose as police or CBI to dupe citizens",
+    "source": "The Indian Express",
+    "url": "https://indianexpress.com/article/explained/explained-sci-tech/digital-arrest-cyber-fraud-explained-9642234/",
+    "date": "Explainer"
+  },
+  {
+    "id": 3,
+    "title": "RBI cautions public against mule bank accounts used in digital payment frauds",
+    "source": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/business/india-business/rbi-cautions-public-against-mule-bank-accounts-used-for-money-laundering/articleshow/111929315.cms",
+    "date": "Banking Alert"
+  },
+  {
+    "id": 4,
+    "title": "Supreme Court seeks Centre and RBI response to curb digital arrest cyber frauds",
+    "source": "The Hindu",
+    "url": "https://www.thehindu.com/news/national/supreme-court-seeks-rbi-centre-response-on-plea-to-curb-digital-arrest-scams/article68972827.ece",
+    "date": "Legal Action"
+  },
+  {
+    "id": 5,
+    "title": "Government blocks over 1.4 lakh mobile numbers involved in financial cyber fraud",
+    "source": "The Economic Times",
+    "url": "https://economictimes.indiatimes.com/news/india/centre-blocks-over-1-4-lakh-mobile-numbers-involved-in-financial-fraud/articleshow/110196880.cms",
+    "date": "Enforcement"
+  }
+]
