@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { getSettings, saveSettings } from '../services/storage';
 
 interface ScreenshotSlotProps {
   src: string;
@@ -79,7 +80,15 @@ function ScreenshotSlot({ src, alt, caption }: ScreenshotSlotProps) {
 }
 
 export default function LandingPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.slice(0, 2) as 'en' | 'hi' | 'mr') || 'en';
+
+  const handleLanguageChange = (lang: 'en' | 'hi' | 'mr') => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem('dsc_lang', lang);
+    const settings = getSettings();
+    saveSettings({ ...settings, language: lang });
+  };
 
   const screenshotItems = [
     {
@@ -94,8 +103,8 @@ export default function LandingPage() {
     },
     {
       src: '/screenshots/03-practise.png',
-      alt: t('landing.screenshots.slot3', 'Practise a scam safely'),
-      caption: t('landing.screenshots.slot3', 'Practise a scam safely'),
+      alt: t('landing.screenshots.slot3', 'Practice a scam safely'),
+      caption: t('landing.screenshots.slot3', 'Practice a scam safely'),
     },
     {
       src: '/screenshots/04-checker.png',
@@ -152,92 +161,227 @@ export default function LandingPage() {
         style={{
           background: 'var(--color-primary)',
           color: '#fff',
-          padding: '48px 24px 64px 24px',
-          textAlign: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '20px',
+          padding: '24px 20px 48px 20px',
+          position: 'relative',
         }}
       >
-        <span
-          style={{
-            background: '#3B82F6',
-            color: '#fff',
-            padding: '4px 12px',
-            borderRadius: '16px',
-            fontSize: '14px',
-            fontWeight: 700,
-          }}
-        >
-          HackKumbh 2026: YCCE Nagpur
-        </span>
-        <h1 style={{ fontSize: '36px', margin: 0, color: '#fff', fontWeight: 800 }}>
-          Satark
-        </h1>
-        <p
-          style={{
-            fontSize: 'var(--text-xl)',
-            color: '#DBEAFE',
-            maxWidth: '580px',
-            margin: 0,
-            lineHeight: 1.4,
-          }}
-        >
-          {t('appSubtitle', 'Digital Literacy and Cyber Fraud Awareness Assistant for Senior Citizens')}
-        </p>
-        <p style={{ fontSize: 'var(--text-body)', color: '#BFDBFE', maxWidth: '520px', margin: 0 }}>
-          Read aloud in Hindi, Marathi and English, when your phone has the voice installed. Works without internet after the first visit.
-        </p>
-
-        {/* Above the fold CTA */}
         <div
           style={{
+            maxWidth: '1080px',
+            margin: '0 auto',
             display: 'flex',
-            gap: '16px',
-            marginTop: '12px',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
+            flexDirection: 'column',
+            gap: '24px',
           }}
         >
-          <Link
-            to="/app/home"
+          {/* Top Row: Language Switcher */}
+          <div
             style={{
-              background: '#fff',
-              color: 'var(--color-primary)',
-              minHeight: 'var(--btn-height)',
-              padding: '0 32px',
-              borderRadius: 'var(--radius)',
-              fontWeight: 800,
-              fontSize: 'var(--text-lg)',
-              textDecoration: 'none',
-              display: 'inline-flex',
+              display: 'flex',
+              justifyContent: 'flex-end',
               alignItems: 'center',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              gap: '8px',
+            }}
+            aria-label="Language selector"
+          >
+            {[
+              { code: 'en' as const, label: 'English' },
+              { code: 'hi' as const, label: 'हिन्दी' },
+              { code: 'mr' as const, label: 'मराठी' },
+            ].map((lang) => {
+              const isSelected = currentLang === lang.code;
+              return (
+                <button
+                  key={lang.code}
+                  type="button"
+                  onClick={() => handleLanguageChange(lang.code)}
+                  style={{
+                    padding: '8px 14px',
+                    borderRadius: 'var(--radius)',
+                    fontSize: '15px',
+                    fontWeight: 700,
+                    background: isSelected ? 'rgba(255, 255, 255, 0.25)' : 'transparent',
+                    color: '#fff',
+                    border: isSelected ? '2px solid #FFFFFF' : '1px solid rgba(255, 255, 255, 0.4)',
+                    cursor: 'pointer',
+                    transition: 'all 150ms ease',
+                  }}
+                  aria-pressed={isSelected}
+                >
+                  {lang.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Hero Content Grid: Left Text, Right Photo (Desktop) / Column (Mobile) */}
+          <div
+            className="hero-grid"
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '32px',
             }}
           >
-            Open the app
-          </Link>
-          <Link
-            to="/onboarding"
-            style={{
-              background: 'transparent',
-              color: '#fff',
-              border: '2px solid #fff',
-              minHeight: 'var(--btn-height)',
-              padding: '0 24px',
-              borderRadius: 'var(--radius)',
-              fontWeight: 700,
-              fontSize: 'var(--text-lg)',
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center',
-            }}
-          >
-            Start Setup
-          </Link>
+            {/* Hero Text Column */}
+            <div
+              style={{
+                flex: '1 1 480px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '16px',
+                textAlign: 'left',
+              }}
+            >
+              <h1
+                style={{
+                  fontSize: 'clamp(32px, 5vw, 44px)',
+                  margin: 0,
+                  color: '#fff',
+                  fontWeight: 800,
+                  lineHeight: 1.15,
+                }}
+              >
+                Satark
+              </h1>
+              <p
+                style={{
+                  fontSize: 'var(--text-xl)',
+                  color: '#DBEAFE',
+                  margin: 0,
+                  lineHeight: 1.4,
+                  fontWeight: 600,
+                }}
+              >
+                {t('appSubtitle', 'Digital Literacy and Cyber Fraud Awareness Assistant for Senior Citizens')}
+              </p>
+              <p
+                style={{
+                  fontSize: 'var(--text-body)',
+                  color: '#BFDBFE',
+                  margin: 0,
+                  lineHeight: 1.5,
+                }}
+              >
+                Read aloud in Hindi, Marathi and English, when your phone has the voice installed. Works without internet after the first visit.
+              </p>
+
+              {/* Mobile Hero Photo Slot (visible on narrow screens) */}
+              <div
+                className="hero-photo-mobile"
+                style={{
+                  display: 'none',
+                  justifyContent: 'center',
+                  margin: '8px 0',
+                }}
+              >
+                <img
+                  src="/images/hero-senior.jpg"
+                  alt="A senior citizen holding a phone and smiling."
+                  loading="lazy"
+                  style={{
+                    maxWidth: '300px',
+                    width: '100%',
+                    height: 'auto',
+                    borderRadius: '16px',
+                    WebkitMaskImage: 'radial-gradient(circle at center, black 65%, transparent 100%)',
+                    maskImage: 'radial-gradient(circle at center, black 65%, transparent 100%)',
+                  }}
+                />
+              </div>
+
+              {/* Action Buttons: "Start setup" first (highlighted), then "Open the app" */}
+              <div
+                style={{
+                  display: 'flex',
+                  gap: '16px',
+                  marginTop: '12px',
+                  flexWrap: 'wrap',
+                }}
+              >
+                <Link
+                  to="/onboarding"
+                  style={{
+                    background: '#FFFFFF',
+                    color: 'var(--color-primary)',
+                    minHeight: '56px',
+                    padding: '0 32px',
+                    borderRadius: 'var(--radius)',
+                    fontWeight: 800,
+                    fontSize: 'var(--text-lg)',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 4px 14px rgba(0,0,0,0.2)',
+                  }}
+                >
+                  Start setup
+                </Link>
+                <Link
+                  to="/app/home"
+                  style={{
+                    background: 'transparent',
+                    color: '#FFFFFF',
+                    border: '2px solid #FFFFFF',
+                    minHeight: '56px',
+                    padding: '0 28px',
+                    borderRadius: 'var(--radius)',
+                    fontWeight: 700,
+                    fontSize: 'var(--text-lg)',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  Open the app
+                </Link>
+              </div>
+            </div>
+
+            {/* Desktop Hero Photo Column */}
+            <div
+              className="hero-photo-desktop"
+              style={{
+                flex: '0 1 420px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <img
+                src="/images/hero-senior.jpg"
+                alt="A senior citizen holding a phone and smiling."
+                loading="lazy"
+                style={{
+                  width: '100%',
+                  maxWidth: '420px',
+                  height: 'auto',
+                  borderRadius: '20px',
+                  WebkitMaskImage: 'radial-gradient(circle at center, black 65%, transparent 100%)',
+                  maskImage: 'radial-gradient(circle at center, black 65%, transparent 100%)',
+                  display: 'block',
+                }}
+              />
+            </div>
+          </div>
         </div>
       </header>
+
+      {/* Responsive Styles for Hero Photo */}
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-photo-desktop {
+            display: none !important;
+          }
+          .hero-photo-mobile {
+            display: flex !important;
+          }
+        }
+      `}</style>
 
       {/* Main Content */}
       <main
