@@ -13,11 +13,11 @@
     {
       "id": "R2",
       "verdict": "red",
-      "description": "Threatens blocking or arrest combined with act-now urgency",
+      "description": "Threatens blocking or arrest combined with act-now urgency or extortion",
       "reasons": {
-        "en": "This message threatens your account and asks you to act at once.",
-        "hi": "यह संदेश आपके खाते को ब्लॉक करने की धमकी देता है और तुरंत कार्रवाई करने को कहता है।",
-        "mr": "हा संदेश तुमच्या खात्याला धोका दाखवतो आणि त्वरित कृती करण्यास सांगतो."
+        "en": "This message threatens you or your account and demands immediate action or money.",
+        "hi": "यह संदेश आपको या आपके खाते को धमकी देता है और तुरंत कार्रवाई या पैसे की मांग करता है।",
+        "mr": "हा संदेश तुम्हाला किंवा तुमच्या खात्याला धमकी देतो आणि त्वरित कृती किंवा पैशांची मागणी करतो."
       }
     },
     {
@@ -38,6 +38,66 @@
         "en": "Installing an app or sharing your screen lets a stranger control your phone.",
         "hi": "ऐप इंस्टॉल करने या स्क्रीन साझा करने से अनजान व्यक्ति आपके फोन को नियंत्रित कर सकता है।",
         "mr": "अॅप इंस्टॉल केल्याने किंवा स्क्रीन शेअर केल्याने अनोळखी व्यक्ती तुमचा फोन नियंत्रित करू शकते."
+      }
+    },
+    {
+      "id": "R7",
+      "verdict": "red",
+      "description": "Fake bank or government account warning with block and link/update",
+      "reasons": {
+        "en": "Banks and government offices never threaten to block your account via message or ask you to update it via links.",
+        "hi": "बैंक और सरकारी कार्यालय कभी भी संदेश द्वारा खाते को ब्लॉक करने की धमकी नहीं देते या लिंक से अपडेट करने को नहीं कहते।",
+        "mr": "बँका आणि सरकारी कार्यालये कधीही मेसेजद्वारे खाते ब्लॉक करण्याची धमकी देत नाहीत किंवा लिंकद्वारे अपडेट करण्यास सांगत नाहीत."
+      }
+    },
+    {
+      "id": "R8",
+      "verdict": "red",
+      "description": "Fake courier or customs fee demand",
+      "reasons": {
+        "en": "Fake delivery and customs messages ask for fees to steal your card details.",
+        "hi": "फर्जी डिलीवरी और कस्टम संदेश आपके कार्ड का विवरण चुराने के लिए शुल्क मांगते हैं।",
+        "mr": "बनावट डिलिव्हरी आणि कस्टम संदेश तुमच्या कार्डचे तपशील चोरण्यासाठी शुल्क मागतात."
+      }
+    },
+    {
+      "id": "R9",
+      "verdict": "red",
+      "description": "Digital arrest or fake police video call demand",
+      "reasons": {
+        "en": "Police, CBI and courts never place anyone under digital arrest or demand video calls.",
+        "hi": "पुलिस, सीबीआई या अदालतें कभी भी किसी को डिजिटल अरेस्ट नहीं करतीं और न ही वीडियो कॉल की मांग करती हैं।",
+        "mr": "पोलीस, सीबीआय आणि न्यायालये कधीही कोणालाही डिजिटल अरेस्ट करत नाहीत किंवा व्हिडिओ कॉलची मागणी करत नाहीत."
+      }
+    },
+    {
+      "id": "R10",
+      "verdict": "red",
+      "description": "Remote access app request",
+      "reasons": {
+        "en": "Sharing your screen or giving remote access lets a scammer control your phone and bank apps.",
+        "hi": "स्क्रीन साझा करने या रिमोट एक्सेस देने से धोखेबाज आपके फोन और बैंक ऐप्स को नियंत्रित कर सकता है।",
+        "mr": "स्क्रीन शेअर केल्याने किंवा रिमोट ॲक्सेस दिल्याने फसवणूक करणारा तुमचा फोन आणि बँक ॲप्स नियंत्रित करू शकतो."
+      }
+    },
+    {
+      "id": "R11",
+      "verdict": "red",
+      "description": "Prize or lottery that demands payment",
+      "reasons": {
+        "en": "Real prizes never require you to pay a fee or advance money to claim them.",
+        "hi": "असली पुरस्कार पाने के लिए कभी भी अग्रिम शुल्क या पैसे देने की आवश्यकता नहीं होती है।",
+        "mr": "खऱ्या बक्षिसांसाठी दावा करण्यासाठी कधीही आगाऊ शुल्क किंवा पैसे भरण्याची आवश्यकता नसते."
+      }
+    },
+    {
+      "id": "R12",
+      "verdict": "red",
+      "description": "Family emergency impersonation demanding money",
+      "reasons": {
+        "en": "Scammers pretend to be relatives calling from a new number asking for emergency money.",
+        "hi": "धोखेबाज नए नंबर से रिश्तेदार बनकर आपातकालीन पैसे मांगने का नाटक करते हैं।",
+        "mr": "फसवणूक करणारे नवीन नंबरवरून नातेवाईक असल्याचे भासवून आपत्कालीन पैशांची मागणी करतात."
       }
     },
     {
@@ -78,6 +138,46 @@
         "en": "Call only the number printed on your card or on the official website.",
         "hi": "केवल अपने कार्ड पर छपे या आधिकारिक वेबसाइट वाले नंबर पर ही कॉल करें।",
         "mr": "फक्त तुमच्या कार्डवर छापलेल्या किंवा अधिकृत वेबसाइटवरील नंबरवर कॉल करा."
+      }
+    },
+    {
+      "id": "Y7",
+      "verdict": "yellow",
+      "description": "Short deadline, no sender name",
+      "reasons": {
+        "en": "Artificial urgency rushes you into making mistakes without verifying.",
+        "hi": "अनावश्यक जल्दबाजी आपको बिना जांचे गलत कदम उठाने पर मजबूर करती है।",
+        "mr": "कृत्रिम घाई तुम्हाला पडताळणी न करता चुका करण्यास भाग पाडते."
+      }
+    },
+    {
+      "id": "Y8",
+      "verdict": "yellow",
+      "description": "Easy-money job requiring deposit",
+      "reasons": {
+        "en": "Job offers asking for deposits or paid tasks are common work-from-home scams.",
+        "hi": "डिपॉजिट या पेड टास्क मांगने वाली नौकरी की पेशकश आम वर्क-फ्रॉम-होम धोखाधड़ी हैं।",
+        "mr": "डिपॉझिट किंवा पेड टास्क मागणारे नोकरीचे प्रस्ताव हे सामान्य वर्क-फ्रॉम-होम घोटाळे आहेत."
+      }
+    },
+    {
+      "id": "Y9",
+      "verdict": "yellow",
+      "description": "Investment promise or guaranteed return",
+      "reasons": {
+        "en": "Guaranteed high returns or trading tips are classic signs of financial fraud.",
+        "hi": "गारंटीड ज्यादा रिटर्न या ट्रेडिंग टिप्स वित्तीय धोखाधड़ी के स्पष्ट संकेत हैं।",
+        "mr": "हमी दिलेला जास्तीचा परतावा किंवा ट्रेडिंग टिप्स ही आर्थिक फसवणुकीची लक्षणे आहेत."
+      }
+    },
+    {
+      "id": "Y10",
+      "verdict": "yellow",
+      "description": "Request for a photo or identity document",
+      "reasons": {
+        "en": "Never send photos of your identity cards, PAN, or debit card over message.",
+        "hi": "संदेश पर कभी भी अपने पहचान पत्र, पैन या डेबिट कार्ड की फोटो न भेजें।",
+        "mr": "मेसेजवर कधीही तुमचे ओळखपत्र, पॅन किंवा डेबिट कार्डचे फोटो पाठवू नका."
       }
     }
   ]
