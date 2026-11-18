@@ -26,12 +26,21 @@ export default function PanicBar() {
       onClick={() => navigate('/app/help')}
       onKeyDown={(e) => e.key === 'Enter' && navigate('/app/help')}
       tabIndex={0}
-      aria-label="Emergency help — got scammed? Tap here"
+      aria-label="Emergency help: got scammed? Tap here"
     >
       <span style={{ color: '#fff', fontSize: '18px', fontWeight: 700 }}>
-        🚨 {t('panic.text')}
+        {t('panic.text')}
       </span>
-      <span style={{ background: '#fff', color: 'var(--color-danger)', borderRadius: '6px', padding: '4px 12px', fontSize: '16px', fontWeight: 700 }}>
+      <span
+        style={{
+          background: '#fff',
+          color: 'var(--color-danger)',
+          borderRadius: '6px',
+          padding: '4px 12px',
+          fontSize: '16px',
+          fontWeight: 700,
+        }}
+      >
         {t('panic.cta')}
       </span>
     </div>

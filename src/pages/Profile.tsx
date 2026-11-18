@@ -38,6 +38,7 @@ export default function Profile() {
     <div style={{ padding: '16px 0', display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <div>
         <button
+          type="button"
           onClick={() => navigate(-1)}
           style={{
             background: 'transparent',
@@ -59,6 +60,7 @@ export default function Profile() {
           {t('profile')}
         </h1>
         <button
+          type="button"
           onClick={() => setEditing(!editing)}
           style={{
             minHeight: '44px',
@@ -178,7 +180,7 @@ export default function Profile() {
         </div>
       )}
 
-      {/* Caregiver Summary */}
+      {/* Caregiver Summary & Direct Link */}
       <div
         style={{
           background: 'var(--color-surface)',
@@ -187,19 +189,40 @@ export default function Profile() {
           padding: '20px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '8px',
+          gap: '12px',
         }}
       >
-        <div style={{ fontSize: 'var(--text-lg)', fontWeight: 700 }}>Caregiver Summary</div>
+        <div style={{ fontSize: 'var(--text-lg)', fontWeight: 700 }}>
+          {t('home.familyCardTitle', 'Family Protection')}
+        </div>
         {caregiver && caregiver.approved ? (
           <div style={{ fontSize: 'var(--text-body)', color: 'var(--color-text)' }}>
             Linked with {caregiver.name} ({caregiver.relationship}) &middot; {caregiver.phone}
           </div>
         ) : (
           <div style={{ fontSize: 'var(--text-body)', color: 'var(--color-text-muted)' }}>
-            No caregiver linked currently.
+            {t('home.familyCardDesc', 'Link a trusted family member or helper')}
           </div>
         )}
+
+        <button
+          type="button"
+          onClick={() => navigate('/app/caregiver')}
+          style={{
+            minHeight: '56px',
+            background: 'var(--color-secondary)',
+            color: '#fff',
+            border: 'none',
+            borderRadius: 'var(--radius)',
+            fontSize: 'var(--text-body)',
+            fontWeight: 700,
+            cursor: 'pointer',
+          }}
+        >
+          {caregiver && caregiver.approved
+            ? t('caregiver.seniorView', 'Manage Caregiver Settings')
+            : t('caregiver.addLabel', 'Add a Caregiver')}
+        </button>
       </div>
 
       {/* Progress Summary */}
@@ -211,19 +234,59 @@ export default function Profile() {
           padding: '20px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '8px',
+          gap: '12px',
         }}
       >
-        <div style={{ fontSize: 'var(--text-lg)', fontWeight: 700 }}>Progress Summary</div>
-        <div style={{ fontSize: 'var(--text-body)' }}>
-          Lessons Completed: {progress.lessonsCompleted || 0}
+        <div style={{ fontSize: 'var(--text-lg)', fontWeight: 700 }}>
+          {t('progress.title', 'Learning Progress')}
         </div>
         <div style={{ fontSize: 'var(--text-body)' }}>
-          Scenarios Completed: {progress.scenariosCompleted || 0}
+          Lessons Completed: {progress.lessonsCompleted || 0} of 6
+        </div>
+        <div style={{ fontSize: 'var(--text-body)' }}>
+          Scenarios Completed: {progress.scenariosCompleted || 0} of 2
+        </div>
+
+        <div style={{ display: 'flex', gap: '12px', marginTop: '4px' }}>
+          <button
+            type="button"
+            onClick={() => navigate('/app/learn')}
+            style={{
+              flex: 1,
+              minHeight: '56px',
+              background: 'var(--color-primary)',
+              color: '#fff',
+              border: 'none',
+              borderRadius: 'var(--radius)',
+              fontSize: 'var(--text-body)',
+              fontWeight: 600,
+              cursor: 'pointer',
+            }}
+          >
+            {t('nav.learn')}
+          </button>
+          <button
+            type="button"
+            onClick={() => navigate('/app/practise')}
+            style={{
+              flex: 1,
+              minHeight: '56px',
+              background: 'var(--color-surface)',
+              color: 'var(--color-primary)',
+              border: '1px solid var(--color-primary)',
+              borderRadius: 'var(--radius)',
+              fontSize: 'var(--text-body)',
+              fontWeight: 600,
+              cursor: 'pointer',
+            }}
+          >
+            {t('nav.practise')}
+          </button>
         </div>
       </div>
 
       <button
+        type="button"
         onClick={() => navigate('/')}
         style={{
           minHeight: 'var(--btn-height)',

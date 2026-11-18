@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { getProfile } from '../services/storage';
+import { getProfile, getCaregiver } from '../services/storage';
 import ListenButton from '../components/ListenButton';
 import ProgressBar from '../components/ProgressBar';
+import TipBox from '../components/TipBox';
 
 export default function Home() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const profile = getProfile();
+  const caregiver = getCaregiver();
   const greeting = t('greeting', { name: profile?.name ?? 'Friend' });
 
   const tiles = [
@@ -18,22 +20,43 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ padding: '24px 0', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <h1 style={{ fontSize: 'var(--text-xl)' }}>{greeting}</h1>
+    <div style={{ padding: '20px 0', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      {/* 1. Greeting */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h1 style={{ fontSize: 'var(--text-2xl)', margin: 0 }}>{greeting}</h1>
         <ListenButton text={greeting} />
       </div>
 
-      <p style={{ background: '#FEF9C3', border: '1px solid #FDE047', borderRadius: 'var(--radius)', padding: '14px 16px', fontSize: 'var(--text-body)', color: '#713F12' }}>
-        💡 {t('coreRule')}
-      </p>
+      {/* 2. Scrolling Safety Tip Box */}
+      <TipBox />
 
-      <ProgressBar />
+      {/* 3. Core Rule Banner */}
+      <div
+        style={{
+          background: '#FEF9C3',
+          border: '1px solid #FDE047',
+          borderRadius: 'var(--radius)',
+          padding: '14px 16px',
+          fontSize: 'var(--text-body)',
+          color: '#713F12',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          gap: '12px',
+        }}
+      >
+        <span style={{ fontWeight: 600, lineHeight: 1.4 }}>
+          {t('coreRule')}
+        </span>
+        <ListenButton text={t('coreRule')} />
+      </div>
 
+      {/* 4. Four Main Action Cards in 1 Column */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap)' }}>
         {tiles.map((tile) => (
           <div key={tile.to} style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
             <button
+              type="button"
               onClick={() => navigate(tile.to)}
               style={{
                 flex: 1,
@@ -44,7 +67,9 @@ export default function Home() {
                 fontSize: 'var(--text-lg)',
                 fontWeight: 700,
                 padding: '16px',
-                textAlign: 'left'
+                textAlign: 'left',
+                border: 'none',
+                cursor: 'pointer',
               }}
             >
               {tile.label}
@@ -53,6 +78,55 @@ export default function Home() {
           </div>
         ))}
       </div>
+
+      {/* 5. Family Protection (Caregiver) Quick Access Card */}
+      <section
+        style={{
+          background: 'var(--color-surface)',
+          border: 'var(--border)',
+          borderRadius: 'var(--radius-lg, 16px)',
+          padding: '16px 20px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          gap: '16px',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.04)',
+        }}
+      >
+        <div>
+          <div style={{ fontSize: 'var(--text-body)', fontWeight: 700, color: 'var(--color-text)' }}>
+            {t('home.familyCardTitle', 'Family Protection')}
+          </div>
+          <div style={{ fontSize: 'var(--text-sm, 14px)', color: 'var(--color-text-muted)', marginTop: '2px' }}>
+            {caregiver && caregiver.approved
+              ? t('home.familyConnected', 'Caregiver linked: {{name}}', { name: caregiver.name })
+              : t('home.familyCardDesc', 'Link a trusted family member or helper')}
+          </div>
+        </div>
+        <button
+          type="button"
+          onClick={() => navigate('/app/caregiver')}
+          style={{
+            minHeight: '48px',
+            padding: '8px 16px',
+            background: 'var(--color-secondary)',
+            color: '#fff',
+            border: 'none',
+            borderRadius: 'var(--radius)',
+            fontSize: 'var(--text-body)',
+            fontWeight: 700,
+            cursor: 'pointer',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {caregiver && caregiver.approved
+            ? t('home.manageCaregiver', 'Manage')
+            : t('home.addCaregiver', 'Connect')}
+        </button>
+      </section>
+
+      {/* 6. Learning Progress Section */}
+      <ProgressBar />
     </div>
   );
 }

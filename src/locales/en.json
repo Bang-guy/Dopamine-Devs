@@ -5,7 +5,13 @@
     "checkMessage": "Check a Message",
     "practise": "Practise",
     "askLearn": "Ask & Learn",
-    "help": "Help"
+    "help": "Help",
+    "familyCardTitle": "Family Protection",
+    "familyCardDesc": "Link a trusted family member or helper",
+    "familyConnected": "Caregiver linked: {{name}}",
+    "manageCaregiver": "Manage",
+    "addCaregiver": "Connect",
+    "viewProgress": "View Full Progress and Profile"
   },
   "panic": {
     "text": "Got scammed?",
@@ -15,7 +21,25 @@
   "listen": "Listen",
   "back": "Back",
   "next": "Next",
-  "settings": "Settings",
+  "settings": {
+    "language": "Language",
+    "textSize": "Text Size",
+    "theme": "Theme",
+    "alerts": "Scam Alerts",
+    "replayTutorial": "Replay Tutorial",
+    "restartProgress": "Restart Progress",
+    "deleteAccount": "Delete Account",
+    "logout": "Log Out",
+    "about": "About This App",
+    "version": "Version",
+    "feedback": "Send Feedback",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "rateUs": "Rate Us",
+    "checkUpdates": "Check for Updates",
+    "caregiver": "Caregiver",
+    "permissions": "App Permissions"
+  },
   "profile": "My Profile",
   "yes": "Yes",
   "no": "No",
@@ -36,7 +60,7 @@
     "phoneLabel": "Your phone number",
     "phoneExplain": "We only use this for your caregiver to link with you. We never share or sell it.",
     "demoCodeLabel": "Enter Demo Code",
-    "demoCodeNote": "This is a practice app. Enter any 4 digits — it's just for demo.",
+    "demoCodeNote": "This is a practice app. Enter any 4 digits : it's just for demo.",
     "skipTutorial": "Skip Tutorial"
   },
   "nav": {
@@ -46,34 +70,16 @@
     "learn": "Learn",
     "help": "Help",
     "settings": "Settings",
-    "profile": "Profile"
+    "profile": "Profile",
+    "caregiver": "Family"
   },
   "faq": {
     "title": "Frequently Asked Questions"
   },
-  "settings": {
-    "language": "Language",
-    "textSize": "Text Size",
-    "theme": "Theme",
-    "alerts": "Scam Alerts",
-    "replayTutorial": "Replay Tutorial",
-    "restartProgress": "Restart Progress",
-    "deleteAccount": "Delete Account",
-    "logout": "Log Out",
-    "about": "About This App",
-    "version": "Version",
-    "feedback": "Send Feedback",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Use",
-    "rateUs": "Rate Us",
-    "checkUpdates": "Check for Updates",
-    "caregiver": "Caregiver",
-    "permissions": "App Permissions"
-  },
   "age": {
     "under50": "Under 50",
-    "50to59": "50 – 59",
-    "60to69": "60 – 69",
+    "50to59": "50 to 59",
+    "60to69": "60 to 69",
     "70plus": "70 and above"
   },
   "theme": {
@@ -90,7 +96,8 @@
     "gettingConfident": "Getting Confident",
     "safetyReady": "Safety Ready",
     "lessonsOf": "{{done}} of {{total}} lessons",
-    "scenariosCompleted": "{{count}} scenarios completed"
+    "scenariosCompleted": "{{count}} scenarios completed",
+    "title": "Your Progress"
   },
   "caregiver": {
     "addLabel": "Add a Caregiver",
@@ -124,7 +131,7 @@
   },
   "help": {
     "checklist": {
-      "title": "If You Were Scammed — Do This Now",
+      "title": "If You Were Scammed : Do This Now",
       "step1": "Stay calm. You are not alone and help is available.",
       "step2": "Do NOT send any more money or share any more information.",
       "step3": "Call the Cyber Crime Helpline: 1930",
@@ -230,5 +237,12 @@
     "required": "This field is required.",
     "minLength": "Please enter at least {{min}} characters.",
     "phoneFormat": "Please enter a valid 10-digit phone number."
+  },
+  "tips": {
+    "title": "Safety tips",
+    "tapToRead": "Tap to read full tip",
+    "previous": "Previous tip",
+    "next": "Next tip",
+    "close": "Close"
   }
 }
