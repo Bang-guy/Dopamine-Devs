@@ -1,7 +1,7 @@
 {
-  "name": "Digital Safety Companion",
-  "short_name": "SafetyComp",
-  "description": "Digital safety education for seniors — available in English, Hindi, and Marathi",
+  "name": "Satark",
+  "short_name": "Satark",
+  "description": "Digital Literacy and Cyber Fraud Awareness Assistant for Senior Citizens",
   "theme_color": "#1E3A8A",
   "background_color": "#FAF7F2",
   "display": "standalone",
@@ -39,7 +39,7 @@
     {
       "name": "Emergency Help",
       "url": "/app/help",
-      "description": "Get immediate help if you've been scammed"
+      "description": "Get immediate help if you have been scammed"
     }
   ]
 }

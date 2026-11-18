@@ -1,7 +1,7 @@
-# Satark (Digital Safety Companion)
+# Satark
 
-> Digital Literacy & Cyber Fraud Awareness Assistant for Senior Citizens  
-> Developed by **Dopamine Devs** for **HackKumbh 2026** at Yeshwantrao Chavan College of Engineering (YCCE), Nagpur, with IEEE Maharashtra and IEEE Computer Society.  
+> Digital Literacy and Cyber Fraud Awareness Assistant for Senior Citizens  
+> Developed for **HackKumbh 2026** at Yeshwantrao Chavan College of Engineering (YCCE), Nagpur, with IEEE Maharashtra and IEEE Computer Society.  
 > Theme: *"Tech for Humanity: Innovating for Health, Education and Rural Empowerment"*
 
 ---

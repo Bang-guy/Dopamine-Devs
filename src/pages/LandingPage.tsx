@@ -160,7 +160,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer style={{ background: 'var(--color-surface)', borderTop: 'var(--border)', padding: '32px 24px 80px 24px', textAlign: 'center', fontSize: '14px', color: 'var(--color-text-muted)' }}>
         <p style={{ margin: 0 }}>
-          Satark &middot; Digital Safety Companion &middot; Theme: Tech for Humanity
+          Satark &middot; Theme: Tech for Humanity
         </p>
       </footer>
 

@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Satark (Digital Safety Companion) prototype are documented in this file.
+All notable changes to the Satark prototype are documented in this file.
 
 ## [0.1.0] - 2026-11-18 (HackKumbh 2026 Prototype Release)
 
@@ -30,5 +30,5 @@ All notable changes to the Satark (Digital Safety Companion) prototype are docum
   - 5 Scam of the Week cards sourced from RBI, I4C, NPCI, and TRAI advisories.
   - A4 Printable Emergency Safety Card.
 - **Landing Page & Technical Documentation (Phase 9)**:
-  - Accessible landing page with above-the-fold CTA, 5 landing FAQs, sticky mobile launch bar, and Dopamine Devs team credits.
+  - Accessible landing page with above-the-fold CTA, 5 landing FAQs, and sticky mobile launch bar.
   - Architecture, Privacy Model, and Test Plan documentation.

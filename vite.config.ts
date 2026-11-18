@@ -18,9 +18,9 @@ export default defineConfig({
       },
       strategies: 'generateSW',
       manifest: {
-        name: 'Digital Safety Companion',
-        short_name: 'SafetyComp',
-        description: 'Digital safety education for seniors',
+        name: 'Satark',
+        short_name: 'Satark',
+        description: 'Digital Literacy and Cyber Fraud Awareness Assistant for Senior Citizens',
         theme_color: '#1E3A8A',
         background_color: '#FAF7F2',
         display: 'standalone',

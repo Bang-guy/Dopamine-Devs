@@ -70,7 +70,7 @@ export default function LegalPage({ type }: LegalPageProps) {
         {type === 'about' && (
           <>
             <p style={{ margin: 0 }}>
-              <strong>Satark (Digital Safety Companion)</strong> is an assistive cybersecurity application built for senior citizens and digitally vulnerable communities across India.
+              <strong>Satark</strong> is an assistive cybersecurity application built for senior citizens and digitally vulnerable communities across India.
             </p>
             <p style={{ margin: 0 }}>
               Developed for HackKumbh 2026 under the theme "Tech for Humanity: Innovating for Health, Education and Rural Empowerment", Satark teaches seniors to identify online financial fraud, avoid phishing traps, and respond decisively during cyber attacks.
