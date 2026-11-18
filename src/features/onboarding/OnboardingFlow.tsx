@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { saveProfile, saveProgress, getProgress, type UserProfile } from '../../services/storage';
 import Page1Details from './Page1Details';
 import Page2MobileVerification from './Page2MobileVerification';
-import Step6Tutorial from './Step6Tutorial';
 import Step7Alerts from './Step7Alerts';
 
 export interface OnboardingData {
@@ -17,7 +16,7 @@ export interface OnboardingData {
   alertsEnabled: boolean;
 }
 
-const TOTAL_STEPS = 4;
+const TOTAL_STEPS = 3;
 
 export default function OnboardingFlow() {
   const navigate = useNavigate();
@@ -112,13 +111,6 @@ export default function OnboardingFlow() {
           />
         )}
         {step === 3 && (
-          <Step6Tutorial
-            onNext={() => next({})}
-            onBack={back}
-            onSkip={() => next({})}
-          />
-        )}
-        {step === 4 && (
           <Step7Alerts
             onNext={(alertsEnabled) => next({ alertsEnabled })}
             onBack={back}

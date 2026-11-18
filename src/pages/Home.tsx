@@ -14,10 +14,10 @@ export default function Home() {
   const greeting = t('greeting', { name: profile?.name ?? 'Friend' });
 
   const tiles = [
-    { label: t('home.checkMessage'), to: '/app/check', bg: 'var(--color-primary)', color: '#fff' },
-    { label: t('home.practise'),    to: '/app/practise', bg: 'var(--color-secondary)', color: '#fff' },
-    { label: t('home.askLearn'),    to: '/app/learn',   bg: 'var(--color-accent)',  color: '#fff' },
-    { label: t('home.help'),        to: '/app/help',    bg: 'var(--color-danger)',  color: '#fff' },
+    { label: t('home.checkMessage'), to: '/app/check',    bg: 'var(--color-primary)',   color: '#fff', id: 'home-card-check' },
+    { label: t('home.practise'),     to: '/app/practise',  bg: 'var(--color-secondary)', color: '#fff', id: 'home-card-practice' },
+    { label: t('home.askLearn'),     to: '/app/learn',     bg: 'var(--color-accent)',    color: '#fff', id: 'home-card-learn' },
+    { label: t('home.help'),         to: '/app/help',      bg: 'var(--color-danger)',    color: '#fff', id: 'home-card-help' },
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function Home() {
       {/* 3. Four Main Action Cards in 1 Column */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap)' }}>
         {tiles.map((tile) => (
-          <div key={tile.to} style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <div key={tile.to} id={tile.id} style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
             <button
               type="button"
               onClick={() => navigate(tile.to)}
@@ -59,7 +59,7 @@ export default function Home() {
         ))}
       </div>
 
-      {/* 5. Family Protection (Caregiver) Quick Access Card */}
+      {/* 4. Family Protection (Caregiver) Quick Access Card */}
       <section
         style={{
           background: 'var(--color-surface)',
@@ -105,10 +105,10 @@ export default function Home() {
         </button>
       </section>
 
-      {/* 6. Learning Progress Section */}
+      {/* 5. Learning Progress Section */}
       <ProgressBar />
 
-      {/* 7. Cyber Fraud News Section */}
+      {/* 6. Cyber Fraud News Section */}
       <NewsSection />
     </div>
   );

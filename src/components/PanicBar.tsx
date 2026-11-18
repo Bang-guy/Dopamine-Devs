@@ -7,6 +7,7 @@ export default function PanicBar() {
 
   return (
     <div
+      id="panic-bar"
       role="banner"
       style={{
         position: 'fixed',

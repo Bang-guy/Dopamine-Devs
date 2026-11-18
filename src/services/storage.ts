@@ -45,6 +45,7 @@ const LS_KEYS = {
   SETTINGS: 'dsc_settings',
   BANK_CARE_NUMBER: 'dsc_bank_care_number',
   CAREGIVER: 'dsc_caregiver',
+  TUTORIAL_COMPLETED: 'dsc_tutorial_completed',
 } as const;
 
 function lsSet<T>(key: string, value: T): void {
@@ -129,6 +130,16 @@ export function saveCaregiver(cg: CaregiverData | null): void {
 
 export function getCaregiver(): CaregiverData | null {
   return lsGet<CaregiverData>(LS_KEYS.CAREGIVER);
+}
+
+// ─── Tutorial State ────────────────────────────────────────────────────────
+
+export function isTutorialCompleted(): boolean {
+  return lsGet<boolean>(LS_KEYS.TUTORIAL_COMPLETED) === true;
+}
+
+export function setTutorialCompleted(value: boolean): void {
+  lsSet(LS_KEYS.TUTORIAL_COMPLETED, value);
 }
 
 // ─── Clear all data ─────────────────────────────────────────────────────────

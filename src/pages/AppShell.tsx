@@ -1,10 +1,34 @@
+import { useState, useEffect } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PanicBar from '../components/PanicBar';
 import TopBar from '../components/TopBar';
+import SpotlightOverlay from '../features/tutorial/SpotlightOverlay';
+import { isTutorialCompleted, setTutorialCompleted } from '../services/storage';
 
 export default function AppShell() {
   const { t } = useTranslation();
+  const [showTutorial, setShowTutorial] = useState(false);
+
+  useEffect(() => {
+    if (!isTutorialCompleted()) {
+      // Slight delay to let the Home page render and elements appear
+      const timer = setTimeout(() => setShowTutorial(true), 600);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  // Listen for custom replay event from Settings and Help
+  useEffect(() => {
+    const handler = () => setShowTutorial(true);
+    window.addEventListener('replay-tutorial', handler);
+    return () => window.removeEventListener('replay-tutorial', handler);
+  }, []);
+
+  const handleTutorialFinish = () => {
+    setTutorialCompleted(true);
+    setShowTutorial(false);
+  };
 
   const navItems = [
     {
@@ -107,6 +131,9 @@ export default function AppShell() {
         ))}
       </nav>
       <PanicBar />
+
+      {/* Spotlight Tutorial Overlay */}
+      {showTutorial && <SpotlightOverlay onFinish={handleTutorialFinish} />}
     </div>
   );
 }
