@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { speak } from '../services/speech';
+import { Volume2 } from 'lucide-react';
 
 interface Props {
   text: string;
@@ -17,20 +18,23 @@ export default function ListenButton({ text }: Props) {
       onClick={handleListen}
       aria-label={t('listen')}
       style={{
-        background: 'var(--color-secondary)',
-        color: '#fff',
-        minHeight: '44px',
-        padding: '8px 16px',
+        background: 'transparent',
+        color: 'var(--color-text-muted)',
+        minHeight: '40px',
+        padding: '4px 12px',
         borderRadius: 'var(--radius)',
         fontSize: 'var(--text-body)',
         display: 'flex',
         alignItems: 'center',
-        gap: '6px',
-        fontWeight: 600,
+        gap: '4px',
+        fontWeight: 500,
         flexShrink: 0,
+        opacity: 0.7,
+        border: 'none',
+        cursor: 'pointer',
       }}
     >
-      🔊 {t('listen')}
+      <Volume2 size={18} /> {t('listen')}
     </button>
   );
 }

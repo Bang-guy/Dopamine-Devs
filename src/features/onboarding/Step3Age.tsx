@@ -8,10 +8,11 @@ interface Props {
 }
 
 const AGE_RANGES: Array<{ value: UserProfile['ageRange']; key: string }> = [
-  { value: 'under50', key: 'age.under50' },
-  { value: '50to59',  key: 'age.50to59'  },
-  { value: '60to69',  key: 'age.60to69'  },
-  { value: '70plus',  key: 'age.70plus'  },
+  { value: 'under40', key: 'age.under40' },
+  { value: '40to49', key: 'age.40to49' },
+  { value: '50to59', key: 'age.50to59' },
+  { value: '60to69', key: 'age.60to69' },
+  { value: '70plus', key: 'age.70plus' },
 ];
 
 export default function Step3Age({ onNext, onBack }: Props) {

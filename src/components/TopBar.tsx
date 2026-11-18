@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getSettings, saveSettings } from '../services/storage';
+import { Settings, User, Heart, Sun, Moon } from 'lucide-react';
 
 export default function TopBar() {
   const { t } = useTranslation();
@@ -83,9 +84,13 @@ export default function TopBar() {
               borderRadius: 'var(--radius)',
               color: 'var(--color-text)',
               cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
             }}
             aria-label="Toggle light or dark theme"
           >
+            {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
             {theme === 'light' ? t('theme.dark', 'Dark') : t('theme.light', 'Light')}
           </button>
 
@@ -103,8 +108,12 @@ export default function TopBar() {
               border: 'var(--border)',
               borderRadius: 'var(--radius)',
               cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
             }}
           >
+            <Heart size={18} />
             {t('nav.caregiver', 'Family')}
           </button>
 
@@ -122,8 +131,12 @@ export default function TopBar() {
               border: 'var(--border)',
               borderRadius: 'var(--radius)',
               cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
             }}
           >
+            <User size={18} />
             {t('nav.profile', 'Profile')}
           </button>
 
@@ -141,8 +154,12 @@ export default function TopBar() {
               border: 'var(--border)',
               borderRadius: 'var(--radius)',
               cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
             }}
           >
+            <Settings size={18} />
             {t('nav.settings', 'Settings')}
           </button>
         </div>

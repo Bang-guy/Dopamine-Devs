@@ -84,10 +84,10 @@ export default function LegalPage({ type }: LegalPageProps) {
         {type === 'privacy' && (
           <>
             <p style={{ margin: 0 }}>
-              <strong>Zero Server Storage & Zero Tracking:</strong> Satark runs entirely on your local device. We do not store or transmit pasted messages, bank numbers, profile names, or contact data to external servers.
+              <strong>Zero Server Storage & Zero Tracking:</strong> Satark runs entirely on your local device. We do not store or transmit pasted messages, bank numbers, profile names, gender, city or district, or contact data to external servers.
             </p>
             <p style={{ margin: 0 }}>
-              All simulated scenarios and message checker evaluations are performed client-side using deterministic offline rules. No third-party analytics, tracking pixels, or advertising scripts are ever loaded.
+              All profile details (name, age range, gender, city or district, and phone number) stay stored only on your phone's local storage and are never uploaded, shared, or sold. All simulated scenarios and message checker evaluations are performed client-side using deterministic offline rules. No third-party analytics, tracking pixels, or advertising scripts are ever loaded.
             </p>
           </>
         )}

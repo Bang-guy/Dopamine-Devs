@@ -31,28 +31,7 @@ export default function Home() {
       {/* 2. Scrolling Safety Tip Box */}
       <TipBox />
 
-      {/* 3. Core Rule Banner */}
-      <div
-        style={{
-          background: '#FEF9C3',
-          border: '1px solid #FDE047',
-          borderRadius: 'var(--radius)',
-          padding: '14px 16px',
-          fontSize: 'var(--text-body)',
-          color: '#713F12',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: '12px',
-        }}
-      >
-        <span style={{ fontWeight: 600, lineHeight: 1.4 }}>
-          {t('coreRule')}
-        </span>
-        <ListenButton text={t('coreRule')} />
-      </div>
-
-      {/* 4. Four Main Action Cards in 1 Column */}
+      {/* 3. Four Main Action Cards in 1 Column */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap)' }}>
         {tiles.map((tile) => (
           <div key={tile.to} style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>

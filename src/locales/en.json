@@ -3,8 +3,8 @@
   "greeting": "Hello, {{name}}!",
   "home": {
     "checkMessage": "Check a Message",
-    "practise": "Practise",
-    "askLearn": "Ask & Learn",
+    "practise": "Practice",
+    "askLearn": "Learn",
     "help": "Help",
     "familyCardTitle": "Family Protection",
     "familyCardDesc": "Link a trusted family member or helper",
@@ -57,15 +57,22 @@
     "chooseLanguage": "Choose your language",
     "nameLabel": "What is your name?",
     "agePlaceholder": "Select your age range",
-    "phoneLabel": "Your phone number",
+    "phoneLabel": "Mobile number (10 digits)",
     "phoneExplain": "We only use this for your caregiver to link with you. We never share or sell it.",
-    "demoCodeLabel": "Enter Demo Code",
+    "demoCodeLabel": "Demo",
     "demoCodeNote": "This is a practice app. Enter any 4 digits : it's just for demo.",
-    "skipTutorial": "Skip Tutorial"
+    "skipTutorial": "Skip Tutorial",
+    "detailsTitle": "Your details",
+    "ageLabel": "Age range",
+    "genderLabel": "Gender",
+    "cityLabel": "City or district",
+    "cityNote": "Optional. Used only to show local helplines in future. You can skip this.",
+    "mobileVerificationTitle": "Mobile verification",
+    "demoCodeWording": "This code is only for this app. Never share it with anyone who calls you."
   },
   "nav": {
     "home": "Home",
-    "practise": "Practise",
+    "practise": "Practice",
     "check": "Check",
     "learn": "Learn",
     "help": "Help",
@@ -80,7 +87,9 @@
     "under50": "Under 50",
     "50to59": "50 to 59",
     "60to69": "60 to 69",
-    "70plus": "70 and above"
+    "70plus": "70 and above",
+    "under40": "Under 40",
+    "40to49": "40 to 49"
   },
   "theme": {
     "light": "Light",
@@ -262,5 +271,10 @@
     "title": "Cyber Fraud News",
     "subtitle": "Latest news articles and safety advisories",
     "readArticle": "Read article"
+  },
+  "gender": {
+    "woman": "Woman",
+    "man": "Man",
+    "preferNotToSay": "Prefer not to say"
   }
 }

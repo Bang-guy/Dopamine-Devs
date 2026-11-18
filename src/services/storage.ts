@@ -4,7 +4,9 @@ import { openDB, IDBPDatabase } from 'idb';
 
 export interface UserProfile {
   name: string;
-  ageRange: 'under50' | '50to59' | '60to69' | '70plus';
+  ageRange: 'under40' | '40to49' | '50to59' | '60to69' | '70plus';
+  gender?: 'woman' | 'man' | 'preferNotToSay';
+  city?: string;
   phone: string;
   language: 'en' | 'hi' | 'mr';
   onboardingComplete: boolean;

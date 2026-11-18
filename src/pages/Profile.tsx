@@ -17,6 +17,8 @@ export default function Profile() {
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState(profile?.name || '');
   const [phone, setPhone] = useState(profile?.phone || '');
+  const [gender, setGender] = useState<UserProfile['gender']>(profile?.gender || 'woman');
+  const [city, setCity] = useState(profile?.city || '');
 
   const caregiver = getCaregiver();
   const progress = getProgress();
@@ -28,6 +30,8 @@ export default function Profile() {
       ...profile,
       name: name.trim(),
       phone: phone.trim(),
+      gender,
+      city: city.trim(),
     };
     saveProfile(updated);
     setProfile(updated);
@@ -130,6 +134,49 @@ export default function Profile() {
             />
           </div>
 
+          <div>
+            <label style={{ display: 'block', fontSize: 'var(--text-body)', fontWeight: 600, marginBottom: '6px' }}>
+              Gender
+            </label>
+            <select
+              value={gender}
+              onChange={(e) => setGender(e.target.value as UserProfile['gender'])}
+              style={{
+                width: '100%',
+                padding: '12px',
+                fontSize: 'var(--text-body)',
+                border: 'var(--border)',
+                borderRadius: 'var(--radius)',
+                background: 'var(--color-surface)',
+                color: 'var(--color-text)',
+              }}
+            >
+              <option value="woman">{t('gender.woman', 'Woman')}</option>
+              <option value="man">{t('gender.man', 'Man')}</option>
+              <option value="preferNotToSay">{t('gender.preferNotToSay', 'Prefer not to say')}</option>
+            </select>
+          </div>
+
+          <div>
+            <label style={{ display: 'block', fontSize: 'var(--text-body)', fontWeight: 600, marginBottom: '6px' }}>
+              City or District
+            </label>
+            <input
+              type="text"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              placeholder="e.g. Nagpur"
+              style={{
+                width: '100%',
+                padding: '12px',
+                fontSize: 'var(--text-body)',
+                border: 'var(--border)',
+                borderRadius: 'var(--radius)',
+                boxSizing: 'border-box',
+              }}
+            />
+          </div>
+
           <button
             type="submit"
             style={{
@@ -166,6 +213,16 @@ export default function Profile() {
           <div>
             <div style={{ fontSize: '14px', color: 'var(--color-text-muted)' }}>Age Range</div>
             <div style={{ fontSize: 'var(--text-body)' }}>{profile ? t(`age.${profile.ageRange}`) : ''}</div>
+          </div>
+
+          <div>
+            <div style={{ fontSize: '14px', color: 'var(--color-text-muted)' }}>Gender</div>
+            <div style={{ fontSize: 'var(--text-body)' }}>{profile?.gender ? t(`gender.${profile.gender}`) : 'Not specified'}</div>
+          </div>
+
+          <div>
+            <div style={{ fontSize: '14px', color: 'var(--color-text-muted)' }}>City or District</div>
+            <div style={{ fontSize: 'var(--text-body)' }}>{profile?.city || 'Not provided'}</div>
           </div>
 
           <div>
