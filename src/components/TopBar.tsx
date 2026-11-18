@@ -142,6 +142,7 @@ export default function TopBar() {
 
           {/* Settings Button */}
           <button
+            id="top-settings"
             type="button"
             onClick={() => navigate('/app/settings')}
             style={{

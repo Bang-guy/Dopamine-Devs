@@ -218,7 +218,12 @@ export default function SettingsPage() {
 
         {/* 6. Replay Tutorial */}
         <div
-          onClick={() => navigate('/app/help/tutorial')}
+          onClick={() => {
+            navigate('/app/home');
+            setTimeout(() => {
+              window.dispatchEvent(new CustomEvent('replay-tutorial'));
+            }, 300);
+          }}
           style={{ padding: '18px 20px', borderBottom: 'var(--border)', cursor: 'pointer', display: 'flex', justifyContent: 'space-between' }}
         >
           <span style={{ fontSize: 'var(--text-body)', fontWeight: 600 }}>6. {t('settings.replayTutorial')}</span>
