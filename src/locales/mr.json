@@ -45,9 +45,9 @@
   "no": "नाही",
   "alertsPrompt": "नव्या फसवणुकीची माहिती मिळाल्यावर सूचना द्यायची?",
   "verdicts": {
-    "red": "सावधान! हे फसवणूक असू शकते.",
-    "yellow": "जपून राहा. काहीतरी संशयास्पद वाटते.",
-    "green": "हे सुरक्षित वाटते."
+    "red": "संभाव्य फसवणूक",
+    "yellow": "सावध राहा",
+    "green": "या तपासणीत कोणतीही धोक्याची चिन्हे आढळली नाहीत"
   },
   "safeNextStep": "सुरक्षित पुढचे पाऊल",
   "practice": "सराव",
@@ -128,14 +128,27 @@
   "finish": "पूर्ण",
   "save": "नंबर जतन करा",
   "checker": {
+    "messageChecked": "तपासलेला मेसेज (draft: native speaker review needed)",
     "checking": "तपासत आहे, कृपया थांबा...",
     "pasteLabel": "संदेश किंवा लिंक येथे पेस्ट करा",
     "pastePlaceholder": "SMS, WhatsApp संदेश, किंवा पेमेंट विनंती लिंक पेस्ट करा...",
+    "pasteButton": "पेस्ट करा (draft: native speaker review needed)",
+    "pasteBlocked": "बॉक्समध्ये दाबून ठेवा आणि पेस्ट निवडा. (draft: native speaker review needed)",
+    "choosePhoto": "फोटो निवडा (draft: native speaker review needed)",
+    "takePhoto": "फोटो काढा (draft: native speaker review needed)",
+    "readingPhoto": "फोटो वाचत आहे... (draft: native speaker review needed)",
+    "ocrFailed": "आम्ही हे स्पष्टपणे वाचू शकलो नाही. मेसेज टाइप करा किंवा स्पष्ट फोटो वापरून पहा. (draft: native speaker review needed)",
+    "removePhoto": "फोटो काढा (draft: native speaker review needed)",
     "checkButton": "तपासा",
     "clearButton": "साफ करा",
+    "whyWrong": "हे का चुकीचे आहे (draft: native speaker review needed)",
+    "whatToDo": "आता काय करावे (draft: native speaker review needed)",
+    "whatToDoAction": "क्लिक करू नका, उत्तर देऊ नका किंवा कोणतेही पैसे पाठवू नका. तुमच्या कार्डवरील नंबरवर कॉल करा. पैसे गमावले असल्यास, आत्ताच 1930 वर कॉल करा. (draft: native speaker review needed)",
+    "greenHeading": "या तपासणीत कोणतीही धोक्याची चिन्हे आढळली नाहीत (draft: native speaker review needed)",
+    "greenBody": "हा मेसेज विश्वासू वाटतो आणि फसवणुकीचे कोणतेही मुख्य लक्षण आढळले नाही. परंतु आधी ते तपासा. पडताळणी केल्याशिवाय कोणताही पैशांचा व्यवहार करू नका. खात्री नसल्यास, तुमच्या कार्डवरील नंबरवर कॉल करा. (draft: native speaker review needed)",
     "guaranteeDisclaimer": "हे साधन इशारा देते, हमी नाही. नवीन घोटाळे आढळू शकत नाहीत.",
     "warningSigns": "धोक्याची चिन्हे आढळली:",
-    "seeSteps": "करावयाची पावले पाहा",
+    "seeSteps": "पायऱ्या पहा (draft: native speaker review needed)",
     "checkAnother": "दुसरा संदेश तपासा"
   },
   "help": {
@@ -276,5 +289,18 @@
     "woman": "महिला",
     "man": "पुरुष",
     "preferNotToSay": "सांगू इच्छित नाही"
+  },
+  "tutorial": {
+    "checkText": "मेसेज तपासण्यासाठी येथे टॅप करा. कोणताही संशयास्पद मेसेज किंवा लिंक पेस्ट करा. (draft: native speaker review needed)",
+    "practiceText": "सराव करण्यासाठी येथे टॅप करा. कोणतीही जोखीम न घेता सुरक्षित फसवणुकीची उदाहरणे वापरून पहा. (draft: native speaker review needed)",
+    "learnText": "छोट्या धड्यांसाठी येथे टॅप करा. तुम्ही प्रत्येक धडा पाहू आणि ऐकू शकता. (draft: native speaker review needed)",
+    "helpText": "मदतीसाठी येथे टॅप करा. फसवणूक झाल्यास काय करावे हे येथे दाखवले आहे. (draft: native speaker review needed)",
+    "panicText": "पैसे गमावल्यास ही लाल पट्टी त्वरित 1930 वर कॉल करते. (draft: native speaker review needed)",
+    "settingsText": "तुमची भाषा, मजकुराचा आकार आणि इतर सेटिंग्ज येथे बदला. (draft: native speaker review needed)",
+    "listenLabel": "सूचना ऐका",
+    "stopListening": "थांबवा",
+    "skipTutorial": "ट्यूटोरियल वगळा",
+    "replayDesc": "हा मार्गदर्शित दौरा मुख्य स्क्रीनवरील प्रत्येक वैशिष्ट्य दाखवतो. यामुळे तुमच्या माहितीत कोणताही बदल होत नाही. (draft: native speaker review needed)",
+    "startReplay": "मार्गदर्शित दौरा सुरू करा (draft: native speaker review needed)"
   }
 }

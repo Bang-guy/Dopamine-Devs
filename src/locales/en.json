@@ -45,9 +45,9 @@
   "no": "No",
   "alertsPrompt": "Allow alerts when new scam types are reported?",
   "verdicts": {
-    "red": "Warning! This looks like a scam.",
-    "yellow": "Be careful. Something seems off.",
-    "green": "This looks safe."
+    "red": "Likely scam",
+    "yellow": "Be careful",
+    "green": "No warning signs found in this check"
   },
   "safeNextStep": "Safe Next Step",
   "practice": "Practice",
@@ -128,14 +128,27 @@
   "finish": "Finish",
   "save": "Save number",
   "checker": {
+    "messageChecked": "Message checked",
     "checking": "Checking, please wait...",
     "pasteLabel": "Paste the message or link here",
     "pastePlaceholder": "Paste SMS, WhatsApp message, or payment request link...",
+    "pasteButton": "Paste",
+    "pasteBlocked": "Long press in the box and choose Paste.",
+    "choosePhoto": "Choose a photo",
+    "takePhoto": "Take a photo",
+    "readingPhoto": "Reading the photo...",
+    "ocrFailed": "We could not read this clearly. Type the message, or try a clearer photo.",
+    "removePhoto": "Remove photo",
     "checkButton": "Check",
     "clearButton": "Clear",
+    "whyWrong": "Why this is wrong",
+    "whatToDo": "What to do now",
+    "whatToDoAction": "Do not click, reply, or send any money. Call the number on your card. If money is lost, call 1930 now.",
+    "greenHeading": "No warning signs found in this check",
+    "greenBody": "This message seems trusted, and no crucial scam sign was found. But check it first. Do not do any money transaction without verifying it. If you are not sure, call the number on your card.",
     "guaranteeDisclaimer": "This tool gives a warning, not a guarantee. New scams may not be detected.",
     "warningSigns": "Warning signs detected:",
-    "seeSteps": "See the steps to take",
+    "seeSteps": "See the steps",
     "checkAnother": "Check another message"
   },
   "help": {
@@ -276,5 +289,18 @@
     "woman": "Woman",
     "man": "Man",
     "preferNotToSay": "Prefer not to say"
+  },
+  "tutorial": {
+    "checkText": "Tap here to check a message. Paste any suspicious text or link.",
+    "practiceText": "Tap here to practise. Try safe scam examples without any risk.",
+    "learnText": "Tap here for short lessons. You can watch and listen to each one.",
+    "helpText": "Tap here for help. It shows what to do if you have been scammed.",
+    "panicText": "This red bar calls 1930 at once if money is lost.",
+    "settingsText": "Change your language, text size and other settings here.",
+    "listenLabel": "Listen to instructions",
+    "stopListening": "Stop",
+    "skipTutorial": "Skip tutorial",
+    "replayDesc": "The guided tour highlights each feature on the Home screen. It does not change any of your data.",
+    "startReplay": "Start the guided tour"
   }
 }
