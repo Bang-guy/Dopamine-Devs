@@ -74,6 +74,32 @@ export default function KycModule() {
 
       {stage === 'content' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          {/* Module 1 Video */}
+          <div
+            style={{
+              background: '#0F172A',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+            }}
+          >
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              style={{
+                width: '100%',
+                maxHeight: '420px',
+                display: 'block',
+                borderRadius: '16px',
+                backgroundColor: '#000',
+              }}
+              src={`${import.meta.env.BASE_URL}videos/kyc-module.mp4`}
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
           {/* Chat bubble showing the scam message */}
           <div
             style={{
