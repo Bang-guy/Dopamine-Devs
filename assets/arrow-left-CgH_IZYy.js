@@ -1,4 +1,4 @@
-import{c as o}from"./speech-jZJ4WCyq.js";/**
+import{c as o}from"./speech-w1n70OLS.js";/**
  * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.

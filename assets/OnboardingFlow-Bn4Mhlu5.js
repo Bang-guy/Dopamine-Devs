@@ -1,4 +1,4 @@
-import{r as x,j as e,u as z,l as D,c as W,f as R}from"./index-rGjzp12j.js";import{L as j}from"./ListenButton-BfM3y3JA.js";import{u as m}from"./useTranslation-DM2of2Pq.js";import{c as w}from"./speech-jZJ4WCyq.js";/**
+import{r as x,j as e,u as z,l as D,c as W,f as R}from"./index-D66CjrxA.js";import{L as j}from"./ListenButton-Dr6jrt79.js";import{u as m}from"./useTranslation-3UYzXpGm.js";import{c as w}from"./speech-w1n70OLS.js";/**
  * @license lucide-react v1.75.0 - ISC
  *
  * This source code is licensed under the ISC license.
