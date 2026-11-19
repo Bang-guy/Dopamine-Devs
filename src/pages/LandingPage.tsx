@@ -20,21 +20,23 @@ function ScreenshotSlot({ src, alt, caption }: ScreenshotSlotProps) {
         flexDirection: 'column',
         gap: '8px',
         minWidth: '220px',
+        maxWidth: '260px',
         flex: '1 1 220px',
       }}
     >
       <div
         style={{
           width: '100%',
-          aspectRatio: '9 / 16',
-          borderRadius: 'var(--radius)',
-          border: 'var(--border)',
+          aspectRatio: '9 / 18',
+          borderRadius: '16px',
+          border: '1px solid #CBD5E1',
           overflow: 'hidden',
-          background: '#E5E7EB',
+          background: '#0F172A',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           position: 'relative',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
         }}
       >
         {!hasError ? (
@@ -46,7 +48,7 @@ function ScreenshotSlot({ src, alt, caption }: ScreenshotSlotProps) {
             style={{
               width: '100%',
               height: '100%',
-              objectFit: 'cover',
+              objectFit: 'contain',
               display: 'block',
             }}
           />
@@ -55,7 +57,7 @@ function ScreenshotSlot({ src, alt, caption }: ScreenshotSlotProps) {
             style={{
               padding: '16px',
               textAlign: 'center',
-              color: 'var(--color-text-muted)',
+              color: '#94A3B8',
               fontSize: 'var(--text-sm, 14px)',
               fontWeight: 600,
             }}
@@ -82,6 +84,7 @@ function ScreenshotSlot({ src, alt, caption }: ScreenshotSlotProps) {
 export default function LandingPage() {
   const { t, i18n } = useTranslation();
   const currentLang = (i18n.language?.slice(0, 2) as 'en' | 'hi' | 'mr') || 'en';
+  const base = import.meta.env.BASE_URL;
 
   const handleLanguageChange = (lang: 'en' | 'hi' | 'mr') => {
     i18n.changeLanguage(lang);
@@ -92,34 +95,29 @@ export default function LandingPage() {
 
   const screenshotItems = [
     {
-      src: '/screenshots/01-language.png',
-      alt: t('landing.screenshots.slot1', 'Choose your language'),
-      caption: t('landing.screenshots.slot1', 'Choose your language'),
-    },
-    {
-      src: '/screenshots/02-home.png',
+      src: `${base}screenshots/home.png`,
       alt: t('landing.screenshots.slot2', 'Home with safety tips'),
       caption: t('landing.screenshots.slot2', 'Home with safety tips'),
     },
     {
-      src: '/screenshots/03-practise.png',
-      alt: t('landing.screenshots.slot3', 'Practice a scam safely'),
-      caption: t('landing.screenshots.slot3', 'Practice a scam safely'),
-    },
-    {
-      src: '/screenshots/04-checker.png',
+      src: `${base}screenshots/check.jpg`,
       alt: t('landing.screenshots.slot4', 'Check a message'),
       caption: t('landing.screenshots.slot4', 'Check a message'),
     },
     {
-      src: '/screenshots/05-help.png',
-      alt: t('landing.screenshots.slot5', 'Step-by-step help after a scam'),
-      caption: t('landing.screenshots.slot5', 'Step-by-step help after a scam'),
+      src: `${base}screenshots/practice.jpg`,
+      alt: t('landing.screenshots.slot3', 'Practice a scam safely'),
+      caption: t('landing.screenshots.slot3', 'Practice a scam safely'),
     },
     {
-      src: '/screenshots/06-learn.png',
+      src: `${base}screenshots/learn.jpg`,
       alt: t('landing.screenshots.slot6', 'Short lessons with voice'),
       caption: t('landing.screenshots.slot6', 'Short lessons with voice'),
+    },
+    {
+      src: `${base}screenshots/help.jpg`,
+      alt: t('landing.screenshots.slot5', 'Step-by-step help after a scam'),
+      caption: t('landing.screenshots.slot5', 'Step-by-step help after a scam'),
     },
   ];
 
@@ -274,20 +272,20 @@ export default function LandingPage() {
                 style={{
                   display: 'none',
                   justifyContent: 'center',
-                  margin: '8px 0',
+                  margin: '12px 0',
                 }}
               >
                 <img
-                  src="/images/hero-senior.jpg"
-                  alt="A senior citizen holding a phone and smiling."
+                  src={`${base}screenshots/home.png`}
+                  alt="Satark app preview"
                   loading="lazy"
                   style={{
-                    maxWidth: '300px',
+                    maxWidth: '240px',
                     width: '100%',
                     height: 'auto',
-                    borderRadius: '16px',
-                    WebkitMaskImage: 'radial-gradient(circle at center, black 65%, transparent 100%)',
-                    maskImage: 'radial-gradient(circle at center, black 65%, transparent 100%)',
+                    borderRadius: '24px',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.35)',
+                    display: 'block',
                   }}
                 />
               </div>
@@ -346,23 +344,22 @@ export default function LandingPage() {
             <div
               className="hero-photo-desktop"
               style={{
-                flex: '0 1 420px',
+                flex: '0 1 380px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
             >
               <img
-                src="/images/hero-senior.jpg"
-                alt="A senior citizen holding a phone and smiling."
+                src={`${base}screenshots/home.png`}
+                alt="Satark app preview"
                 loading="lazy"
                 style={{
                   width: '100%',
-                  maxWidth: '420px',
+                  maxWidth: '320px',
                   height: 'auto',
-                  borderRadius: '20px',
-                  WebkitMaskImage: 'radial-gradient(circle at center, black 65%, transparent 100%)',
-                  maskImage: 'radial-gradient(circle at center, black 65%, transparent 100%)',
+                  borderRadius: '28px',
+                  boxShadow: '0 12px 32px rgba(0, 0, 0, 0.4)',
                   display: 'block',
                 }}
               />
