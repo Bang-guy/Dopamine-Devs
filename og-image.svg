@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1E3A8A"/>
+  <rect x="40" y="40" width="1120" height="550" rx="20" fill="#1a3380" stroke="#3B5FBF" stroke-width="2"/>
+  
+  <!-- Shield icon -->
+  <path d="M600 120 L660 150 L660 220 Q660 270 600 300 Q540 270 540 220 L540 150 Z" fill="none" stroke="#FAF7F2" stroke-width="4"/>
+  <path d="M580 220 L595 235 L625 205" stroke="#FAF7F2" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Title -->
+  <text x="600" y="370" font-family="system-ui, sans-serif" font-size="72" font-weight="700" fill="#FAF7F2" text-anchor="middle">Satark</text>
+  
+  <!-- Hindi subtitle -->
+  <text x="600" y="440" font-family="system-ui, sans-serif" font-size="36" fill="#B3C6F5" text-anchor="middle">सतर्क | डिजिटल साक्षरता और साइबर सुरक्षा</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="510" font-family="system-ui, sans-serif" font-size="24" fill="#8BAEE8" text-anchor="middle">Digital Literacy &amp; Fraud Awareness for Seniors · HackKumbh 2026</text>
+</svg>
